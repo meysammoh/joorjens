@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "159166711296",
+    "firebase_url": "https://joorjens-436ce.firebaseio.com",
+    "project_id": "joorjens-436ce",
+    "storage_bucket": "joorjens-436ce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:159166711296:android:c221ab872597ee8e",
+        "android_client_info": {
+          "package_name": "ir.joorjens.joorapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "159166711296-gvgqh3d20s0jh3okdv11ua7u0iomhib6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB25xSQBpur1GnkrQpAHA6nHFbmyVwJJFA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:159166711296:android:85f5d0b8f968f80c",
+        "android_client_info": {
+          "package_name": "ir.joorjens.joorapp.beta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "159166711296-gvgqh3d20s0jh3okdv11ua7u0iomhib6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB25xSQBpur1GnkrQpAHA6nHFbmyVwJJFA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

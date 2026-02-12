@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dppr_main_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="10">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="4"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="right">
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextStyle"
+            android:textColor="@color/color_first"
+            android:text=" تومان"/>
+        <ir.joorjens.joorapp.customViews.CrossLineTextView
+            android:id="@+id/dpkpsr_tv_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextStyle"
+            android:text="مقدار"/>
+    </LinearLayout>
+
+    <ir.joorjens.joorapp.customViews.TextViewPlus
+        android:id="@+id/dpkpsr_tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="6"
+        android:text="نام"
+        style="@style/TextStyleRegular"
+        android:paddingRight="5dp"/>
+
+
+</LinearLayout>

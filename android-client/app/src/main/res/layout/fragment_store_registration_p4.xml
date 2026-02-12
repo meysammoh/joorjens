@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="ir.joorjens.joorapp.fragments.StoreRegistrationP4Fragment">
+
+    <ir.joorjens.joorapp.customViews.TextViewPlus
+        style="@style/TextStyle"
+        android:id="@+id/tv_srp4_msg"
+        android:text="پیام سیستم"/>
+
+    <ir.joorjens.joorapp.customViews.ButtonPlus
+        android:id="@+id/btn_srp4_exit"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="خروج"
+        style="@style/ButtonFirstStyle"/>
+
+</LinearLayout>

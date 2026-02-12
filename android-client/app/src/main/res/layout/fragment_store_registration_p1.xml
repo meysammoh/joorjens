@@ -1,0 +1,109 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context="ir.joorjens.joorapp.fragments.StoreRegistrationP1Fragment"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:scrollbars="none">
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:text="@string/srp1_store_name"
+            style="@style/TextStyle"/>
+
+        <ir.joorjens.joorapp.customViews.EditTextPlus
+            android:id="@+id/et_srp1_store_name"
+            android:textAlignment="center"
+            style="@style/EditTextStyle"
+            android:layout_marginBottom="30dp" />
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:text="@string/srp1_telephone"
+            style="@style/TextStyle"/>
+
+        <ir.joorjens.joorapp.customViews.EditTextPlus
+            android:textAlignment="center"
+            android:id="@+id/et_srp1_telephone"
+            style="@style/EditTextStyle"
+            android:layout_marginBottom="30dp"
+            android:inputType="number" />
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:text="@string/srp1_businessLicense"
+            style="@style/TextStyle"/>
+        <ir.joorjens.joorapp.customViews.EditTextPlus
+            android:textAlignment="center"
+            android:id="@+id/et_srp1_businessLicense"
+            android:layout_marginBottom="30dp"
+            style="@style/EditTextStyle" />
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:text="@string/srp1_province"
+            style="@style/TextStyle"/>
+        <ir.joorjens.joorapp.customViews.SpinnerPlus
+            android:id="@+id/sp_srp1_province"
+            style="@style/SpinnerVioletStyle"
+            android:layout_marginBottom="30dp"/>
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:text="@string/srp1_city"
+            style="@style/TextStyle"/>
+        <ir.joorjens.joorapp.customViews.SpinnerPlus
+            android:id="@+id/sp_srp1_city"
+            style="@style/SpinnerVioletStyle"
+            android:layout_marginBottom="30dp"/>
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:text="@string/srp1_zone"
+            style="@style/TextStyle"/>
+        <ir.joorjens.joorapp.customViews.SpinnerPlus
+            android:id="@+id/sp_srp1_zone"
+            style="@style/SpinnerVioletStyle"
+            android:layout_marginBottom="30dp"/>
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:text="@string/srp1_avenueMain"
+            style="@style/TextStyle"/>
+        <ir.joorjens.joorapp.customViews.EditTextPlus
+            android:textAlignment="center"
+            android:id="@+id/et_srp1_avenueMain"
+            android:layout_marginBottom="30dp"
+            style="@style/EditTextStyle" />
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:text="@string/srp1_avenueAuxiliary"
+            style="@style/TextStyle"/>
+        <ir.joorjens.joorapp.customViews.EditTextPlus
+            android:textAlignment="center"
+            android:id="@+id/et_srp1_avenueAuxiliary"
+            android:layout_marginBottom="30dp"
+            style="@style/EditTextStyle" />
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:text="@string/srp1_plaque"
+            style="@style/TextStyle"/>
+        <ir.joorjens.joorapp.customViews.EditTextPlus
+            android:textAlignment="center"
+            android:id="@+id/et_srp1_plaque"
+            android:layout_marginBottom="30dp"
+            style="@style/EditTextStyle" />
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:text="@string/srp1_postalCode"
+            style="@style/TextStyle"/>
+        <ir.joorjens.joorapp.customViews.EditTextPlus
+            android:textAlignment="center"
+            android:id="@+id/et_srp1_postalCode"
+            android:layout_marginBottom="40dp"
+            android:inputType="number"
+            style="@style/EditTextStyle" />
+
+        <ir.joorjens.joorapp.customViews.ButtonPlus
+            android:layout_marginBottom="10dp"
+            android:id="@+id/btn_srp1_continue"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            style="@style/ButtonFirstStyle"
+            android:text="تایید"/>
+</LinearLayout>

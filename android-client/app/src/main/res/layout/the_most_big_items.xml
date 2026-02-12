@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+    android:id="@+id/rl_tmbi_main_border"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:background="@color/background"
+    android:gravity="center|right"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_toLeftOf="@+id/img_tmbi_thumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="right">
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:layout_marginBottom="5dp"
+            android:id="@+id/tv_tmbi_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextStyleBold"
+            android:gravity="center_vertical"
+            android:text="نام"/>
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:layout_marginBottom="5dp"
+            android:id="@+id/tv_tmbi_text1_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextStyle"
+            android:gravity="center_vertical"
+            android:text="برند: "/>
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:layout_marginBottom="5dp"
+            android:id="@+id/tv_tmbi_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            style="@style/TextStyle"
+            android:text="ویژگی ها"/>
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:layout_marginBottom="5dp"
+            android:id="@+id/tv_tmbi_text3"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            style="@style/TextStyle"
+            android:text="قیمت تکی"/>
+
+        <LinearLayout
+            android:id="@+id/ll_tmbi_disc_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <ir.joorjens.joorapp.customViews.TextViewPlus
+                android:id="@+id/tv_tmbi_text_price_disc"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                style="@style/TextStyle"
+                android:text="بعد از تخفیف"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:gravity="right"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <ir.joorjens.joorapp.customViews.CrossLineTextView
+                    android:id="@+id/tv_tmbi_text_price_no_disc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    style="@style/TextStyle"
+                    android:text="قبل از تخفیف"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ir.joorjens.joorapp.customViews.ImageViewPlus
+        android:layout_margin="10dp"
+        app:iv_percent=".32"
+        android:scaleType="fitCenter"
+        app:iv_text_size="17"
+        app:iv_square="true"
+        android:id="@+id/img_tmbi_thumbnail"
+        android:layout_width="120dp"
+        android:layout_height="120dp"/>
+
+
+</LinearLayout>
+
+    <ir.joorjens.joorapp.customViews.ASLinearLayout
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:background="@color/product_prop_bc"
+        android:layout_height="20dp"
+        app:ll_h_percent=".031"/>
+
+</LinearLayout>

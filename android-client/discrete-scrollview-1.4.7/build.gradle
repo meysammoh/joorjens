@@ -1,0 +1,4 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('discrete-scrollview-1.4.7.aar'))
+dependencies {
+}

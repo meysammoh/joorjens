@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- solids that simulate shadow !-->
+    <item>
+        <shape>
+            <solid android:color="#10CCCCCC" />
+            <padding  android:bottom="@dimen/shadow_depth"  />
+        </shape>
+    </item>
+
+    <item>
+        <shape>
+            <solid android:color="#20CCCCCC" />
+            <padding  android:bottom="@dimen/shadow_depth"  />
+        </shape>
+    </item>
+
+    <item>
+        <shape>
+            <solid android:color="#40CCCCCC" />
+            <padding   android:bottom="@dimen/shadow_depth"/>
+        </shape>
+    </item>
+
+    <item>
+        <shape>
+            <solid android:color="#50CCCCCC" />
+            <padding   android:bottom="@dimen/shadow_depth"/>
+        </shape>
+    </item>
+
+    <item>
+        <shape>
+            <solid android:color="#60CCCCCC" />
+            <padding   android:bottom="1dp" />
+        </shape>
+    </item>
+
+    <!-- main background !-->
+    <item>
+        <shape>
+            <solid android:color="@color/product_prop_bc" />
+        </shape>
+    </item>
+
+
+</layer-list>

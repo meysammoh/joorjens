@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginRight="5dp"
+    android:layout_marginLeft="5dp"
+    android:scrollbars="none">
+
+    <android.support.v4.widget.NestedScrollView
+        android:background="@color/background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ir.joorjens.joorapp.customViews.TextViewPlus
+                android:text="@string/spa_distributor_name"
+                style="@style/TextStyle"/>
+            <ir.joorjens.joorapp.customViews.EditTextPlus
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:id="@+id/et_dist_filter_name"
+                android:layout_marginBottom="25dp"
+                style="@style/EditTextStyle" />
+
+            <ir.joorjens.joorapp.customViews.TextViewPlus
+                android:text="@string/spa_products_brand"
+                style="@style/TextStyle"/>
+            <ir.joorjens.joorapp.customViews.SpinnerPlus
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:id="@+id/sp_dist_filter_products_brand"
+                android:layout_marginBottom="25dp"
+                style="@style/SpinnerVioletStyle" />
+            <ir.joorjens.joorapp.customViews.ButtonPlus
+                android:layout_marginBottom="20dp"
+                android:id="@+id/btn_dist_filter_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/ButtonFirstStyle"
+                android:text="جستجو کن" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

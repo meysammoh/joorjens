@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:scrollbars="none"
+    android:layout_marginTop="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:gravity="right"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <RelativeLayout
+            android:layout_marginBottom="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/black60_border">
+
+            <RelativeLayout
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="40dp"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent">
+
+                <ir.joorjens.joorapp.customViews.ImageViewPlus
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/black90_border"
+                    app:iv_square="true"
+                    android:id="@+id/del_img_pi_avatar"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentRight="true" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toLeftOf="@+id/del_img_pi_avatar"
+                    android:orientation="vertical" >
+
+                    <ir.joorjens.joorapp.customViews.TextViewPlus
+                        android:layout_centerVertical="true"
+                        style="@style/TextStyle"
+                        android:textSize="15sp"
+                        android:id="@+id/del_tv_pi_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="نام و نام خانوادگی"
+                        android:layout_gravity="right" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextStyle"
+            android:textColor="@color/color_first"
+            android:text="@string/lbl_menu_private_info"
+            android:layout_marginBottom="10dp"/>
+        <ir.joorjens.joorapp.customViews.FreakyInputBox
+            app:fib_read_only="true"
+            android:inputType="number"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/del_pi_fib_personal_id"
+            app:fib_name="@string/lbl_personal_id"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/black60_border"/>
+        <ir.joorjens.joorapp.customViews.FreakyInputBox
+            app:fib_read_only="true"
+            android:inputType="number"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/del_pi_fib_mobile_number"
+            app:fib_name="@string/lbl_mobile_number"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/black60_border"/>
+        <ir.joorjens.joorapp.customViews.FreakyInputBox
+            app:fib_read_only="true"
+            android:inputType="text"
+            android:layout_marginBottom="15dp"
+            android:id="@+id/del_pi_fib_email"
+            app:fib_name="@string/lbl_email"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/black60_border"/>
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextStyle"
+            android:textColor="@color/color_first"
+            android:text="@string/lbl_del_menu_vehicle_info"
+            android:layout_marginBottom="10dp"/>
+        <ir.joorjens.joorapp.customViews.FreakyInputBox
+            app:fib_read_only="true"
+            android:inputType="text"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/del_pi_fib_vehicle_type"
+            app:fib_show_action="false"
+            app:fib_action_name="@string/lbl_action_add"
+            app:fib_name="@string/lbl_vehicle_type"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/black60_border"/>
+        <ir.joorjens.joorapp.customViews.FreakyInputBox
+            app:fib_read_only="true"
+            android:inputType="text"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/del_pi_fib_vehicle_plaque"
+            app:fib_show_action="false"
+            app:fib_action_name="@string/lbl_action_add"
+            app:fib_name="@string/lbl_vehicle_plaque"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/black60_border"/>
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextStyle"
+            android:textColor="@color/color_first"
+            android:text="@string/lbl_change_password"
+            android:layout_marginBottom="10dp"/>
+        <ir.joorjens.joorapp.customViews.FreakyInputBox
+            android:inputType="textPassword"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/del_pi_fib_current_password"
+            app:fib_name="@string/lbl_current_password"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/black60_border"/>
+        <ir.joorjens.joorapp.customViews.FreakyInputBox
+            android:inputType="textPassword"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/del_pi_fib_new_password"
+            app:fib_name="@string/lbl_new_password"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/black60_border"/>
+        <ir.joorjens.joorapp.customViews.FreakyInputBox
+            android:inputType="textPassword"
+            android:layout_marginBottom="15dp"
+            android:id="@+id/del_pi_fib_new_password_rep"
+            app:fib_name="@string/lbl_new_password_rep"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/black60_border"/>
+
+        <ir.joorjens.joorapp.customViews.ButtonPlus
+            android:id="@+id/del_pi_btn_apply_changes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ButtonFirstStyle"
+            android:text="@string/lbl_apply_changes"
+            android:layout_marginBottom="20dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

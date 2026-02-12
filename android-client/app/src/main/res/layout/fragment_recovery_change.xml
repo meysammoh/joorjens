@@ -1,0 +1,78 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ir.joorjens.joorapp.fragments.RecoveryChangeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_approve_code"
+            style="@style/TextStyle"
+            android:textColor="@color/color_black50"
+            android:paddingTop="20dp"
+            />
+        <ir.joorjens.joorapp.customViews.EditTextPlus
+            android:id="@+id/input_recovery_code"
+            style="@style/TextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:background="@drawable/edit_text_background"
+            android:layout_margin="10dp"
+            android:minHeight="@dimen/edit_text_min_height" />
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_password"
+            style="@style/TextStyle"
+            android:textColor="@color/color_black50"
+            android:paddingTop="20dp"
+            />
+        <ir.joorjens.joorapp.customViews.EditTextPlus
+            android:id="@+id/input_recovery_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:background="@drawable/edit_text_background"
+            android:layout_margin="10dp"
+            style="@style/TextStyle"
+            android:minHeight="@dimen/edit_text_min_height" />
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_password_repeat"
+            style="@style/TextStyle"
+            android:textColor="@color/color_black50"
+            android:paddingTop="20dp"
+            />
+        <ir.joorjens.joorapp.customViews.EditTextPlus
+            android:id="@+id/input_recovery_pass_repeat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:background="@drawable/edit_text_background"
+            android:layout_margin="10dp"
+            style="@style/TextStyle"
+            android:minHeight="@dimen/edit_text_min_height" />
+
+        <ir.joorjens.joorapp.customViews.ButtonPlus
+            android:id="@+id/btn_change_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ButtonFirstStyle"
+            android:layout_margin="10dp"
+            android:text="@string/button_continue"/>
+
+
+    </LinearLayout>
+
+</FrameLayout>

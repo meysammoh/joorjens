@@ -1,0 +1,347 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@color/color_first"
+        android:id="@+id/del_order_list_top_border">
+
+        <LinearLayout
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:id="@+id/del_order_list_title_bar_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#FFF"
+            style="@style/TextStyle"
+            android:layout_marginBottom="0dp"
+            android:text="@string/orders_list" />
+        <ir.joorjens.joorapp.customViews.ImageViewPlus
+            app:iv_square="true"
+            android:id="@+id/del_order_list_title_bar_img"
+            android:layout_marginLeft="10dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="fitCenter"
+            app:iv_image_source="@drawable/v_order_list"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+        <LinearLayout
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal">
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:visibility="invisible"
+            android:id="@+id/order_list_tb_tv_order_number_value"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="#FFF"
+            style="@style/TextStyle"
+            android:layout_marginBottom="0dp"
+            android:text="0" />
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:visibility="invisible"
+            android:id="@+id/order_list_tb_tv_order_number_label"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="#FFF"
+            style="@style/TextStyle"
+            android:layout_marginBottom="0dp"
+            android:text="@string/order_number_label" />
+
+    </LinearLayout>
+
+    </RelativeLayout>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_below="@+id/del_order_list_top_border"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/del_view_cart_dist_refresh">
+        <android.support.v4.widget.NestedScrollView
+            android:fillViewport="true"
+            android:id="@+id/del_order_scroll"
+            android:layout_below="@+id/del_order_list_top_border"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/del_order_products_container"
+                    android:orientation="vertical"/>
+
+                <LinearLayout
+                    android:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/order_ll_summary_em">
+
+                    <LinearLayout
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+                            <ir.joorjens.joorapp.customViews.TextViewPlus
+                                android:id="@+id/order_price"
+                                style="@style/TextStyleRegular"
+                                android:gravity="right"
+                                android:textSize="16sp"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="0"/>
+                            <ir.joorjens.joorapp.customViews.TextViewPlus
+                                android:layout_width="0dp"
+                                style="@style/TextStyleRegular"
+                                android:textSize="16sp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:text="@string/label_order_price"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/order_credit_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+                            <ir.joorjens.joorapp.customViews.TextViewPlus
+                                android:id="@+id/order_credit"
+                                style="@style/TextStyleRegular"
+                                android:textSize="16sp"
+                                android:gravity="right"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="0"/>
+                            <ir.joorjens.joorapp.customViews.TextViewPlus
+                                android:layout_width="0dp"
+                                style="@style/TextStyleRegular"
+                                android:textSize="16sp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:text="@string/label_order_credit"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+                        <View
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"/>
+                        <LinearLayout
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="1dp"
+                            android:orientation="horizontal"
+                            android:background="@color/color_black60"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:weightSum="3">
+
+                        <ir.joorjens.joorapp.customViews.TextViewPlus
+                            android:id="@+id/order_price_final"
+                            style="@style/TextStyleRegular"
+                            android:layout_width="0dp"
+                            android:gravity="right"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textColor="@color/color_first"
+                            android:textSize="17sp" />
+
+                        <ir.joorjens.joorapp.customViews.TextViewPlus
+                            android:textColor="@color/color_first"
+                            android:layout_width="0dp"
+                            style="@style/TextStyleRegular"
+                            android:textSize="16sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="@string/label_order_price_sum"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:weightSum="3">
+
+                        <ir.joorjens.joorapp.customViews.TextViewPlus
+                            android:gravity="right"
+                            android:textColor="@color/full_sale_color"
+                            android:id="@+id/order_profit_em"
+                            style="@style/TextStyleRegular"
+                            android:textSize="17sp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"/>
+                        <ir.joorjens.joorapp.customViews.TextViewPlus
+                            style="@style/TextStyleRegular"
+                            android:visibility="visible"
+                            android:textColor="@color/full_sale_color"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="right"
+                            android:textSize="16sp"
+                            android:text="سود سفارش شما با خرید از جورجنس"/>
+
+                    </LinearLayout>
+                    <ir.joorjens.joorapp.customViews.ButtonPlus
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        style="@style/ButtonFirstStyle"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/order_btn_confirm"
+                        android:text="@string/label_confirm_order"
+                        android:onClick="confirmOrderButtonClicked"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="visible"
+                    android:id="@+id/order_ll_summary_am"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ir.joorjens.joorapp.customViews.TextViewPlus
+                        android:id="@+id/order_price_am"
+                        style="@style/TextStyleRegular"
+                        android:textSize="17sp"
+                        android:textColor="@color/full_sale_color"
+                        android:textAlignment="center"
+                        android:layout_margin="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="قیمت"/>
+
+                    <ir.joorjens.joorapp.customViews.TextViewPlus
+                        android:visibility="visible"
+                        android:id="@+id/order_profit_am"
+                        android:textStyle="bold"
+                        style="@style/TextStyleRegular"
+                        android:textSize="17sp"
+                        android:textColor="@color/full_sale_color"
+                        android:textAlignment="center"
+                        android:layout_margin="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="سود"/>
+
+                    <ir.joorjens.joorapp.customViews.ButtonPlus
+                        android:layout_margin="5dp"
+                        style="@style/ButtonFirstStyle"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:textSize="15sp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/order_btn_show_by_distributor"
+                        android:text="@string/label_order_show_by_distributor" />
+
+                </LinearLayout>
+
+                <ir.joorjens.joorapp.customViews.NonScrollExpandableListView
+                    android:visibility="gone"
+                    android:id="@+id/expandableListView_order_distributors"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:childDivider="@android:color/white"
+                    android:divider="@android:color/white"
+                    android:groupIndicator="@null"
+                    android:scrollbars="none"
+                    android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft" />
+
+                <LinearLayout
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/order_bottom"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ir.joorjens.joorapp.customViews.ButtonPlus
+                        android:layout_margin="5dp"
+                        style="@style/ButtonWhiteStyle"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/order_btn_previous_page"
+                        android:text="@string/label_return_previous_page"
+                        />
+                    <ir.joorjens.joorapp.customViews.ButtonPlus
+                        android:layout_margin="5dp"
+                        style="@style/ButtonWhiteStyle"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/order_btn_past_orders"
+                        android:text="@string/label_past_orders"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

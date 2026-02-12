@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+    android:layout_marginTop="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+        android:id="@+id/distlist_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:scrollbars="none">
+
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/ll_da_top_border"
+        android:background="@color/background">
+        <LinearLayout
+            android:id="@+id/ll_search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <ir.joorjens.joorapp.customViews.ButtonPlus
+                android:textSize="16sp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="4dp"
+                android:id="@+id/dist_filter_by_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/ButtonGreenBGWhiteTextStyle"
+                android:text="@string/label_based_on_name"/>
+
+            <ir.joorjens.joorapp.customViews.ButtonPlus
+                android:textSize="16sp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="2dp"
+                android:id="@+id/dist_filter_by_category"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/ButtonPinkBGWhiteTextStyle"
+                android:text="@string/label_based_on_category"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_tab_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="0dp"
+            android:weightSum="10">
+            <ir.joorjens.joorapp.customViews.ButtonPlus
+                android:textSize="20sp"
+                android:id="@+id/distlist_btn_tab_alphabet"
+                style="@style/ButtonWhiteStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:background="@null"
+                android:text="@string/label_based_on_alphabet" />
+            <ir.joorjens.joorapp.customViews.ButtonPlus
+                android:textSize="20sp"
+                android:id="@+id/distlist_btn_tab_scores"
+                style="@style/ButtonWhiteStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:background="@null"
+                android:text="@string/label_based_on_score" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_tab_line"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/unselected_tab_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="0dp"
+            android:weightSum="10">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_weight="4.8"
+                android:layout_height="4dp"
+                android:background="@drawable/unselected_tab_bg"
+                android:id="@+id/distlist_ll_tab_alphabet" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".2"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_weight="4.8"
+                android:layout_height="4dp"
+                android:background="@drawable/selected_tab_bg"
+                android:id="@+id/distlist_ll_tab_score" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

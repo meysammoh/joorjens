@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/pink_border_no_corner">
+
+    <ir.joorjens.joorapp.customViews.ImageViewPlus
+        android:id="@+id/img_dialog_exit"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:iv_square="true"
+        app:iv_image_source="@drawable/v_delete_order"
+        android:layout_gravity="right"
+        android:layout_margin="10dp"/>
+    <ir.joorjens.joorapp.customViews.TextViewPlus
+        style="@style/TextStyle"
+        android:id="@+id/txt_promotion_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Promotion Text"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+    <LinearLayout
+        android:id="@+id/ll_buttons_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal" >
+
+        <ir.joorjens.joorapp.customViews.ButtonPlus
+            style="@style/ButtonFirstStyle"
+            android:id="@+id/btn_dialog_accept"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Yes"
+            android:clickable="true"
+            android:layout_margin="5dp"
+            android:textSize="15sp"/>
+
+        <ir.joorjens.joorapp.customViews.ButtonPlus
+            style="@style/ButtonWhiteStyle"
+            android:id="@+id/btn_dialog_reject"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="No"
+            android:clickable="true"
+            android:layout_margin="5dp"
+            android:textSize="15sp"/>
+    </LinearLayout>
+
+</LinearLayout>

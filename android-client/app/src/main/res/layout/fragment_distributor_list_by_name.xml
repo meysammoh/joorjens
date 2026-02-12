@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginRight="5dp"
+    android:layout_marginLeft="5dp"
+    android:scrollbars="none"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/breadcrumbs">
+
+        </LinearLayout>
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:visibility="gone"
+            android:id="@+id/fr_dis_list_by_name_dist_not_found"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextStyle"
+            android:text="@string/dist_not_found"/>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/dist_by_date_refresh">
+
+                <android.support.v4.widget.NestedScrollView
+                    android:id="@+id/dist_list_by_name_main_scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:id="@+id/distlist_container_distributors"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
+                            android:divider="@android:color/white"
+                            android:childDivider="@android:color/white"
+                            android:groupIndicator="@null"
+                            android:scrollbars="none"
+                            android:orientation="vertical"/>
+                </android.support.v4.widget.NestedScrollView>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

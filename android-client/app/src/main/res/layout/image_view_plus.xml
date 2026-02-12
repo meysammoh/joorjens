@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/ivp_main_border"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="300dp">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:scaleType="fitCenter"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:padding="1dp"
+        android:id="@+id/ivp_img"/>
+
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_alignParentRight="true"
+        android:id="@+id/ivp_discount_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:visibility="gone"
+        app:srcCompat="@drawable/ic_discount_star"/>
+    <ir.joorjens.joorapp.customViews.TextViewPlus
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:shadowColor="#000"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="1"
+        android:background="@null"
+        android:id="@+id/ivp_discount_text"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:rotation="+45"
+        style="@style/TextStyleBold"
+        android:textSize="10sp"
+        android:ellipsize="none"
+        android:singleLine="true"
+        android:text="25 %"/>
+
+    <ir.joorjens.joorapp.customViews.CircularTextView
+        android:layout_marginLeft="25dp"
+        android:layout_alignParentTop="true"
+        android:padding="1dp"
+        android:gravity="center"
+        android:id="@+id/ivp_count"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextStyleBold"
+        android:textSize="8sp"
+        android:text=""
+        android:textColor="#FFFFFF"/>
+
+</RelativeLayout>

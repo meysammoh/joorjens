@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ir.joorjens.joorapp.customViews.ASLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginLeft="3dp"
+    android:layout_marginRight="3dp"
+    android:id="@+id/discount_item_body"
+    android:layout_width="150dp"
+    app:ll_w_percent=".26"
+    android:layout_height="wrap_content">
+    
+    <ir.joorjens.joorapp.customViews.ImageViewPlus
+        app:iv_show_discount_value="true"
+        app:iv_square="true"
+        app:iv_percent=".26"
+        app:iv_text_size="15"
+        app:iv_discount_value="12%"
+        android:id="@+id/discount_item_image"
+        android:scaleType="centerInside"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/radio_plus" />
+
+    <ir.joorjens.joorapp.customViews.TextViewPlus
+        android:id="@+id/discount_item_brand_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ll_top_margin=".005"
+        app:ll_bottom_margin="0"
+        android:textSize="12sp"
+        style="@style/TextStyleRegular"
+        android:gravity="center"
+        android:text="رب گوجه مجید"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:layout_alignParentLeft="true"
+            android:id="@+id/discount_item_new_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            style="@style/TextStyleRegular"
+            android:text="12000"
+            android:textSize="12sp"
+            android:layout_marginLeft="1dp"/>
+
+        <ir.joorjens.joorapp.customViews.CrossLineTextView
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/discount_item_old_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            style="@style/TextStyle"
+            android:layout_marginRight="1dp"
+            android:text="15000"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+
+</ir.joorjens.joorapp.customViews.ASLinearLayout>

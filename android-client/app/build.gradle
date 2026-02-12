@@ -1,0 +1,105 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '27.0.3'
+    defaultConfig {
+        applicationId "ir.joorjens.joorapp"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    // Specifies two flavor dimensions.
+    flavorDimensions "full"
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
+        }
+    }
+
+
+
+    productFlavors {
+        flavor_orig {
+            dimension "full"
+            applicationId 'ir.joorjens.joorapp'
+        }
+        flavor_beta {
+            dimension "full"
+            applicationIdSuffix '.beta'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+}
+
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //compile group: 'com.facebook.fresco', name: 'fresco', version: '0.1.0'
+    // Glide
+    //compile 'com.google.zxing.integration.android'
+    //compile 'com.google.zxing:core:3.2.0'
+    // for bottomNavigation
+    //compile 'com.aurelhubert:ahbottomnavigation:2.1.0'
+    // for crouton
+    // picasso
+    implementation project(':zxing')
+    implementation project(':discrete-scrollview-1.4.7')
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.0-alpha7'
+    implementation 'com.android.support:appcompat-v7:25.1.1'
+    implementation 'com.android.support:recyclerview-v7:25.1.1'
+    implementation 'com.android.support:cardview-v7:25.1.1'
+    implementation 'com.android.support:design:25.1.1'
+    implementation 'com.jakewharton:butterknife:8.0.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.google.code.gson:gson:2.8.1'
+    implementation 'com.android.support:support-v4:25.1.1'
+    implementation 'de.keyboardsurfer.android.widget:crouton:1.8.5@aar'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.daimajia.slider:library:1.1.5@aar'
+    // for crash reporting
+    implementation 'com.github.ajitsing:sherlock:1.0.4@aar'
+    testImplementation 'junit:junit:4.12'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.0.0'
+    implementation 'com.google.firebase:firebase-core:11.2.2'
+    //implementation 'com.google.firebase:firebase-analytics:16.0.1'
+    //implementation project(':sweet_alert_dialog-1.3')
+
+    implementation 'com.github.thomper:sweet-alert-dialog:v1.4.0'
+
+    implementation "com.android.support:appcompat-v7:25.0.+"
+
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.3'
+
+    implementation 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.1.0'
+
+}
+
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'io.fabric'
+
+//apply plugin: 'com.google.android.gms.strict-version-matcher-plugin'
+

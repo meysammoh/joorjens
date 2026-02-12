@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ir.joorjens.joorapp.activities.ConnectionAttemptActivity"
+    tools:layout_editor_absoluteY="25dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_wait"
+        android:background="@color/color_first"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            android:layout_width="80dp"
+            android:layout_height="90dp"
+            android:id="@+id/img_wait_logo"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/v_logo" />
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            style="@style/TextStyle"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/txt_wait"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/img_wait_logo"
+            android:layout_height="wrap_content"
+            android:textColor="#FFF"
+            android:textSize="20sp"
+        android:text="در حال اتصال به سرور ..."/>
+
+        <ir.joorjens.joorapp.customViews.ButtonPlus
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/btn_wait_retry"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/txt_wait"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_border"
+            style="@style/ButtonFirstStyle"
+            android:textSize="15sp"
+            android:textColor="#FFF"
+            android:text="تلاش مجدد"/>
+
+        <ProgressBar
+            android:layout_marginBottom="15dp"
+            android:id="@+id/prgbar_wait"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:indeterminate="true"
+            android:indeterminateTintMode="src_atop"
+            android:indeterminateTint="#FFF"/>
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

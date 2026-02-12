@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+    android:id="@+id/dppr_main_container"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="2"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ir.joorjens.joorapp.customViews.TextViewPlus
+                android:layout_toRightOf="@+id/distrow_tvp_title"
+                style="@style/TextStyle"
+                android:textColor="@color/full_sale_color"
+                android:textSize="15sp"
+                android:text="امتیاز"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/distrow_tvp_score"/>
+            <ir.joorjens.joorapp.customViews.TextViewPlus
+                android:layout_marginLeft="5dp"
+                android:layout_alignParentRight="true"
+                style="@style/TextStyle"
+                android:text="نام شرکت پخش"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/distrow_tvp_title"/>
+
+        </LinearLayout>
+
+        <ir.joorjens.joorapp.customViews.KandouBar
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:minHeight="40dp"
+            android:maxHeight="40dp"
+            android:id="@+id/distrow_rb_rate"
+            android:numStars="5"
+            style="@style/KanduBarSmall"
+            android:stepSize=".1"
+            android:isIndicator="true"
+            android:rating="2"/>
+        <ir.joorjens.joorapp.customViews.ButtonPlus
+            style="@style/ButtonFirstStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/distrow_btn_more_details"
+            android:text="@string/label_show_details"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <ir.joorjens.joorapp.customViews.ImageViewPlus
+            android:layout_weight="1"
+            app:iv_percent=".157"
+            app:iv_square="true"
+            android:id="@+id/distrow_img_logo"
+            android:layout_width="@dimen/hp_logo_size"
+            android:layout_height="@dimen/hp_logo_size"
+            android:layout_gravity="center_horizontal"
+            app:iv_image_source="@drawable/v_logo_discount"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+    <ir.joorjens.joorapp.customViews.ASLinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/product_prop_bc"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        app:ll_h_percent=".031"/>
+
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            style="@style/TextStyle"
+            android:id="@+id/tv_selected_date"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_height"
+            android:background="@drawable/rounded_gray1_color_no_fill"
+            android:gravity="center"
+            android:text="date"/>
+        <ir.joorjens.joorapp.customViews.ImageViewPlus
+            android:id="@+id/iv_drop_down_clicker"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            app:iv_square="true"
+            android:layout_centerVertical="true"
+            app:iv_image_source="@drawable/spinner_green_arrow_gray_border"/>
+
+    </RelativeLayout>
+
+
+    <ir.smartlab.persiandatepicker.PersianDatePicker
+        android:visibility="gone"
+        android:id="@+id/pdp"
+        android:layout_below="@+id/tv_selected_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

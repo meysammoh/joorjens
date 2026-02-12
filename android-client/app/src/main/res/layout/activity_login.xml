@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:id="@+id/la_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="56dp">
+
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/app_logo_with_text_fa" />
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_login"
+            android:layout_gravity="right"
+            style="@style/TextStyle"
+            android:textSize="22sp"/>
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_mobile_number"
+            style="@style/TextStyle"
+            android:textColor="@color/color_black50"
+            />
+
+
+        <ir.joorjens.joorapp.customViews.EditTextPlus
+            android:id="@+id/input_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_background"
+            android:inputType="number"
+            android:minHeight="@dimen/edit_text_min_height"
+            style="@style/TextStyle"
+            android:textAlignment="center"
+            />
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_password"
+            style="@style/TextStyle"
+            android:paddingTop="20dp"
+
+            android:textColor="@color/color_black50"
+            />
+
+
+        <ir.joorjens.joorapp.customViews.EditTextPlus
+            android:id="@+id/input_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_background"
+            android:hint=""
+            android:inputType="textPassword"
+            android:minHeight="@dimen/edit_text_min_height"
+            style="@style/TextStyle"
+            android:textAlignment="center"/>
+        <ir.joorjens.joorapp.customViews.ButtonPlus
+            android:id="@+id/btn_login"
+            style="@style/ButtonFirstStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/button_login"/>
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:id="@+id/link_signup"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="@string/button_signup"
+            android:textSize="16dip"
+            android:paddingTop="20dp"
+            style="@style/TextStyle"/>
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:id="@+id/link_sp_recover_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="@string/button_recover_password"
+            android:textSize="16dip"
+            style="@style/TextStyle"/>
+    </LinearLayout>
+</ScrollView>

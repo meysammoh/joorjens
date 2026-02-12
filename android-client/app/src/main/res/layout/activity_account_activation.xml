@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:id="@+id/aaa_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="56dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/app_logo_with_text_fa" />
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:id="@+id/label_activation_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Activation Message"
+            android:layout_gravity="right"
+            style="@style/TextStyle"
+            android:textSize="18sp"
+            android:layout_marginTop="50dp"/>
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_approve_code"
+            style="@style/TextStyle"
+            android:paddingTop="20dp"
+android:layout_marginTop="20dp"
+            android:textColor="@color/color_black50"
+            />
+
+
+        <ir.joorjens.joorapp.customViews.EditTextPlus
+            android:id="@+id/input_activation_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_background"
+            android:hint=""
+            android:inputType="text"
+            android:minHeight="50dp"
+            style="@style/TextStyle"
+            android:textAlignment="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:weightSum="2">
+
+            <ir.joorjens.joorapp.customViews.ButtonPlus
+                android:id="@+id/btn_activate_account"
+                style="@style/ButtonFirstStyle"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="@string/button_approve"
+                android:textSize="16sp" />
+
+            <ir.joorjens.joorapp.customViews.TimerButton
+                android:layout_marginLeft="5dp"
+                android:id="@+id/btn_resend_code"
+                style="@style/ButtonRoundedWhiteStyle"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

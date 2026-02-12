@@ -1,0 +1,73 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ir.joorjens.joorapp.fragments.ReturnProductP1Fragment">
+
+    <LinearLayout
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:gravity="right"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        tools:context="ir.joorjens.joorapp.activities.ReturnProductActivity">
+
+        <ir.joorjens.joorapp.customViews.ButtonPlus
+            android:id="@+id/rpa_btn_scan_barcode"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ButtonFirstStyle"
+            android:text="@string/lbl_action_scan"/>
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/spa_product_name"
+            style="@style/TextStyle"/>
+        <ir.joorjens.joorapp.customViews.EditTextPlus
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/rpa_et_product_name"
+            android:background="@drawable/black60_border"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent" />
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/spa_product_category"
+            style="@style/TextStyle"/>
+        <ir.joorjens.joorapp.customViews.SpinnerPlus
+            android:layout_marginBottom="10dp"
+            android:id="@+id/rpa_sp_product_category"
+            style="@style/SpinnerVioletStyle"
+            android:layout_width="match_parent" />
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/spa_barcode"
+            style="@style/TextStyle"/>
+        <ir.joorjens.joorapp.customViews.EditTextPlus
+            android:gravity="center"
+            android:layout_marginBottom="30dp"
+            android:id="@+id/rpa_et_product_barcode"
+            android:background="@drawable/black60_border"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent" />
+
+        <ir.joorjens.joorapp.customViews.ButtonPlus
+            android:id="@+id/rpa_btn_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ButtonFirstStyle"
+            android:text="@string/lbl_action_perform_search"/>
+
+    </LinearLayout>
+
+
+</FrameLayout>

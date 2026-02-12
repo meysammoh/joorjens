@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context="ir.joorjens.joorapp.fragments.StoreRegistrationP2Fragment">
+
+    <ir.joorjens.joorapp.customViews.TextViewPlus
+        android:text="@string/srp2_managerNI"
+        style="@style/TextStyle"/>
+    <ir.joorjens.joorapp.customViews.EditTextPlus
+        android:textAlignment="center"
+        android:id="@+id/et_srp2_managerNI"
+        android:layout_marginBottom="30dp"
+        android:inputType="number"
+        style="@style/EditTextStyle" />
+
+    <ir.joorjens.joorapp.customViews.TextViewPlus
+        android:text="@string/srp2_managerGT"
+        style="@style/TextStyle"/>
+    <ir.joorjens.joorapp.customViews.SpinnerPlus
+        android:id="@+id/sp_srp2_managerGT"
+        style="@style/SpinnerVioletStyle"
+        android:layout_marginBottom="30dp"/>
+
+    <ir.joorjens.joorapp.customViews.TextViewPlus
+        android:text="@string/srp2_activityType"
+        style="@style/TextStyle"/>
+    <ir.joorjens.joorapp.customViews.SpinnerPlus
+        android:id="@+id/sp_srp2_activityType"
+        style="@style/SpinnerVioletStyle"
+        android:layout_marginBottom="40dp"/>
+
+    <ir.joorjens.joorapp.customViews.ButtonPlus
+        android:layout_marginBottom="10dp"
+        android:id="@+id/btn_srp2_continue"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        style="@style/ButtonFirstStyle"
+        android:text="تایید"/>
+
+</LinearLayout>

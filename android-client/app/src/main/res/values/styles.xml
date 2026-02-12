@@ -1,0 +1,272 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--<item name="android:actionOverflowButtonStyle">@style/MyActionButtonOverflow</item>-->
+        <!--<item name="android:buttonStyle" >@style/ButtonFirstStyle</item>-->
+        <!--<item name="android:textViewStyle">@style/TextStyle</item>-->
+    </style>
+    <style name="ResultButton" parent="@android:style/Widget.Holo.Button.Borderless.Small">
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    <style name="ShareButton" parent="@android:style/Widget.Holo.Button.Borderless.Small">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="ButtonStyle">
+        <item name="ir.joorjens.joorapp:ffont">fonts/yl.ttf</item>
+    </style>
+    <style name="ButtonFirstStyle" parent="ButtonStyle">
+        <item name="android:textColor">@color/color_text_light</item>
+        <item name="android:background">@drawable/rounded_discount_color</item>
+        <item name="android:textSize">@dimen/input_font_size</item>
+    </style>
+
+    <style name="ButtonGreenStyle" parent="ButtonStyle">
+        <item name="android:textColor">@color/color_text_light</item>
+        <item name="android:background">@drawable/rounded_cheap_color</item>
+        <item name="android:textSize">@dimen/input_font_size</item>
+    </style>
+    <style name="ButtonGreenStyleReverse" parent="ButtonStyle">
+        <item name="android:textColor">@color/cheap_color</item>
+        <item name="android:background">@drawable/rounded_cheap_color_no_fill</item>
+        <item name="android:textSize">@dimen/input_font_size</item>
+    </style>
+
+    <style name="ButtonGrayStyle" parent="ButtonStyle">
+        <item name="android:textColor">@color/btn2_fore_color</item>
+        <item name="android:background">@color/btn2_back_color</item>
+        <item name="android:textSize">@dimen/input_font_size</item>
+    </style>
+
+    <style name="ButtonWhiteStyle" parent="ButtonStyle">
+        <item name="android:textColor">@color/color_first</item>
+        <item name="android:background">@drawable/button_border_first</item>
+    </style>
+
+    <style name="ButtonRoundedWhiteStyle" parent="ButtonStyle">
+        <item name="android:textColor">@color/color_first</item>
+        <item name="android:background">@drawable/button_rounded_border_first</item>
+    </style>
+
+    <style name="ButtonWhiteGBGrayBorderStyle" parent="ButtonStyle">
+        <item name="android:textColor">@color/gray1</item>
+        <item name="android:background">@drawable/rounded_gray1_color_no_fill</item>
+    </style>
+
+    <style name="ButtonOrdersFavoriteStyle" parent="ButtonStyle">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:textSize">@dimen/input_font_size</item>
+        <item name="android:textColor">@color/full_sale_color</item>
+        <item name="android:background">@drawable/pink_border</item>
+    </style>
+
+    <style name="ButtonGreenBGWhiteTextStyle" parent="ButtonStyle">
+        <item name="android:textColor">@color/color_text_light</item>
+        <item name="android:background">@drawable/rounded_cheap_color</item>
+        <item name="android:textSize">@dimen/input_font_size</item>
+    </style>
+
+    <style name="ButtonGreenBGWhiteTextStyleNoRounded" parent="ButtonStyle">
+        <item name="android:textColor">@color/color_text_light</item>
+        <item name="android:background">@color/cheap_color</item>
+        <item name="android:textSize">@dimen/input_font_size</item>
+    </style>
+
+    <style name="ButtonPinkBGWhiteTextStyle" parent="ButtonStyle">
+        <item name="android:textColor">@color/color_text_light</item>
+        <item name="android:background">@drawable/rounded_topsale_color</item>
+        <item name="android:textSize">@dimen/input_font_size</item>
+    </style>
+
+    <style name="ButtonOrdersNormalStyle" parent="ButtonStyle">
+        <item name="android:textSize">@dimen/input_font_size</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/color_black90</item>
+        <item name="android:background">@drawable/black60_border</item>
+    </style>
+
+    <style name="TextStyle">
+        <item name="ir.joorjens.joorapp:ffont">fonts/yl.ttf</item>
+        <item name="android:textSize">@dimen/input_font_size</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+    <style name="TextStyleRegular">
+        <item name="ir.joorjens.joorapp:ffont">fonts/yr.ttf</item>
+        <item name="android:textSize">@dimen/input_font_size</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+    <style name="TextStyleMost" parent="TextStyleRegular">
+        <item name="android:textColor">@color/gray1</item>
+    </style>
+    <style name="TextStyleBold">
+        <item name="ir.joorjens.joorapp:ffont">fonts/yb.ttf</item>
+        <item name="android:textSize">@dimen/input_font_size</item>
+        <item name="android:layout_height">@dimen/input_height</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="TextTitleStyle">
+        <item name="ir.joorjens.joorapp:ffont">fonts/yb.ttf</item>
+        <item name="android:textSize">@dimen/TV_Title_font_size</item>
+    </style>
+
+    <style name="EditTextStyle">
+        <item name="android:imeOptions">actionDone</item>
+        <item name="ir.joorjens.joorapp:ffont">fonts/yl.ttf</item>
+        <item name="android:textSize">@dimen/input_font_size</item>
+        <item name="android:background">@drawable/edit_text_background</item>
+        <item name="android:layout_height">@dimen/input_height</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="SpinnerVioletStyle">
+        <item name="android:dropDownVerticalOffset">@dimen/input_height</item>
+        <item name="android:popupBackground">@color/spinner_item_back_color</item>
+        <item name="ir.joorjens.joorapp:ffont">fonts/yl.ttf</item>
+        <item name="android:background">@drawable/spinner_plus_violet</item>
+        <item name="android:dropDownWidth">match_parent</item>
+        <item name="android:textSize">@dimen/input_font_size</item>
+        <item name="android:layout_height">@dimen/input_height</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="SpinnerGreenStyle">
+        <item name="android:dropDownVerticalOffset">@dimen/input_height</item>
+        <item name="android:popupBackground">@color/spinner_item_back_color</item>
+        <item name="ir.joorjens.joorapp:ffont">fonts/yl.ttf</item>
+        <item name="android:background">@drawable/spinner_plus_green</item>
+        <item name="android:dropDownWidth">match_parent</item>
+        <item name="android:textSize">@dimen/input_font_size</item>
+        <item name="android:layout_height">@dimen/input_height</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="ExpandableGroupStyle" >
+        <item name="android:textSize">@dimen/input_font_size</item>
+        <item name="android:textColor">@color/expand_text</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="ir.joorjens.joorapp:ffont">fonts/yl.ttf</item>
+        <item name="android:paddingRight">5dp</item>
+    </style>
+
+    <style name="ExpandableItemStyle" >
+        <item name="android:textSize">@dimen/XV_Item_font_size</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="ir.joorjens.joorapp:ffont">fonts/yl.ttf</item>
+        <item name="android:textColor">@color/expand_text</item>
+        <item name="android:paddingRight">45dp</item>
+    </style>
+    <style name="RadioButtonStyle" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:background">?selectableItemBackground</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawablePadding">3dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:drawableRight">@drawable/radio_plus</item>
+        <item name="android:textColor">@color/radio_button_item_color</item>
+        <item name="ir.joorjens.joorapp:ffont">fonts/yr.ttf</item>
+        <item name="android:textSize">@dimen/input_font_size</item>
+    </style>
+
+    <style name="CheckBoxStyle" parent="android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:background">?selectableItemBackground</item>
+        <item name="android:textColor">@color/radio_button_item_color</item>
+        <item name="ir.joorjens.joorapp:ffont">fonts/yr.ttf</item>
+        <item name="android:textSize">@dimen/input_font_size</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:drawableRight">@drawable/checkbox_plus</item>
+        <item name="android:drawablePadding">3dp</item>
+    </style>
+
+    <style name="RoundCornerTagThirdColor">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/round_corner_third_color</item>
+        <item name="ir.joorjens.joorapp:ffont">fonts/yr.ttf</item>
+    </style>
+    <style name="RoundCornerTagFourthColor">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/round_corner_fourth_color</item>
+        <item name="ir.joorjens.joorapp:ffont">fonts/yr.ttf</item>
+    </style>
+
+    <style name="KanduBarBase" parent="@android:style/Widget.Holo.RatingBar.Small">
+        <item name="android:padding">0dp</item>
+        <item name="android:transformPivotX">0dp</item>
+        <item name="android:transformPivotY">0dp</item>
+        <item name="ir.joorjens.joorapp:ffont">fonts/yl.ttf</item>
+    </style>
+
+    <style name="KanduBarSmall" parent="@android:style/Widget.Holo.RatingBar.Small">
+        <item name="android:padding">0dp</item>
+        <item name="android:transformPivotX">0dp</item>
+        <item name="android:transformPivotY">0dp</item>
+        <item name="ir.joorjens.joorapp:ffont">fonts/yl.ttf</item>
+        <item name="android:progressDrawable">@drawable/ratingbar_small_prgogress</item>
+        <item name="android:minHeight">40dp</item>
+        <item name="android:maxHeight">40dp</item>
+    </style>
+
+    <style name="KanduBarLarge" parent="@android:style/Widget.Holo.RatingBar">
+        <item name="android:padding">0dp</item>
+        <item name="android:transformPivotX">0dp</item>
+        <item name="android:transformPivotY">0dp</item>
+        <item name="ir.joorjens.joorapp:ffont">fonts/yl.ttf</item>
+        <item name="android:progressDrawable">@drawable/ratingbar_large_prgogress</item>
+        <item name="android:minHeight">70dp</item>
+        <item name="android:maxHeight">70dp</item>
+    </style>
+
+    <style name="AppDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <!-- Define color properties as desired -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+    </style>
+
+    <style name="ToggleButtonGreenStyle">
+        <item name="ir.joorjens.joorapp:ffont">fonts/yl.ttf</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:padding">0dp</item>
+        <item name="ir.joorjens.joorapp:selected_bg_drawable">@drawable/rounded_cheap_color</item>
+        <item name="ir.joorjens.joorapp:normal_bg_drawable">@drawable/rounded_cheap_color_no_fill</item>
+        <item name="ir.joorjens.joorapp:selected_text_color">@color/background</item>
+        <item name="ir.joorjens.joorapp:normal_text_color">@color/cheap_color</item>
+    </style>
+
+    <style name="ToggleButtonGrayStyle">
+        <item name="ir.joorjens.joorapp:ffont">fonts/yl.ttf</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:padding">0dp</item>
+        <item name="ir.joorjens.joorapp:selected_bg_drawable">@drawable/rounded_gray1_color</item>
+        <item name="ir.joorjens.joorapp:normal_bg_drawable">@drawable/rounded_gray1_color_no_fill</item>
+        <item name="ir.joorjens.joorapp:selected_text_color">@color/background</item>
+        <item name="ir.joorjens.joorapp:normal_text_color">@color/gray1</item>
+    </style>
+
+</resources>

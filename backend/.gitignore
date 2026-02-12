@@ -1,0 +1,35 @@
+# Compiled source #
+###################
+target
+*.war
+*.ear
+*.tar
+*.jar
+*.class
+
+# IDEA specific git ignore
+.idea
+*.iml
+*.iws
+.classpath
+.project
+.settings
+.metadata
+
+# Logs and databases #
+######################
+log
+log_*
+*~
+*.log
+*.log.zip
+*.log.gz
+0-tcp*
+
+# OS generated files #
+######################
+.DS_Store
+._*
+.Trashes
+ehthumbs.db
+Thumbs.db

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <ir.joorjens.joorapp.customViews.ButtonPlus
+        android:id="@+id/toa_btn_search"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ButtonGreenBGWhiteTextStyle"
+        android:text="@string/lbl_action_search"/>
+
+    <ir.joorjens.joorapp.customViews.TextViewPlus
+        android:id="@+id/tv_no_transaction"
+        android:visibility="gone"
+        android:layout_marginRight="5dp"
+        android:gravity="right"
+        style="@style/TextStyleRegular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="تراکنشی موجود نیست"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        tools:context="ir.joorjens.joorapp.activities.TurnoverActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_transactions_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="right"
+        android:orientation="vertical"/>
+
+</android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

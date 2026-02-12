@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ir.joorjens.joorapp.customViews.TitleBar2
+        android:id="@+id/tb2_dist_list_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/cheap_color"
+        app:title2_text="@string/label_distributors"
+        app:tile2_image="@drawable/hp_order_logo_unsel"
+        android:visibility="gone">
+
+    </ir.joorjens.joorapp.customViews.TitleBar2>
+
+    <FrameLayout
+        android:id="@+id/dist_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,227 @@
+<resources>
+    <string name="app_name">جورجنس بتا</string>
+    <string name="action_cheapest">ارزان ترین ها</string>
+    <string name="label_most_recent">جدیدترین ها</string>
+    <string name="action_top_selling">پرفروش ترین ها</string>
+    <string name="button_email">ایمیل</string>
+    <string name="button_email_arbitrary">ایمیل (اختیاری)</string>
+    <string name="button_password">رمز عبور</string>
+    <string name="button_password_repeat">تکرار رمز عبور</string>
+    <string name="button_mobile_number">شماره همراه</string>
+    <string name="button_first_name">نام</string>
+    <string name="button_approve">تأیید</string>
+    <string name="button_resend_activation">ارسال مجدد کد</string>
+    <string name="button_approve_code">کد تأیید</string>
+    <string name="button_last_name">نام خانوادگی</string>
+    <string name="button_login">ورود</string>
+    <string name="button_signup">ایجاد حساب کاربری</string>
+    <string name="button_recover_password">فراموشی رمز عبور</string>
+    <string name="button_continue">ادامه</string>
+    <string name="label_registration">ثبت نام</string>
+    <string name="label_login">ورود</string>
+    <string name="label_dear_user">کاربر گرامی</string>
+    <string name="label_activation_msg">لطفا کد تأیید ارسال شده به شماره همراه ثبت شده را وارد کنید.</string>
+    <string name="running_query">سیستم در حال اجرای درخواست شما میباشد</string>
+    <string name="label_consumer_price">قیمت مصرف کننده:</string>
+    <string name="label_chash">نقدی</string>
+    <string name="label_order_again">سفارش مجدد</string>
+    <string name="label_check">چکی</string>
+    <string name="label_from">از</string>
+    <string name="label_price_one">قیمت واحد</string>
+    <string name="label_to">تا</string>
+    <string name="label_no_discount_available">فاقد تخفیف</string>
+    <string name="label_orders_list">لیست سفارشات</string>
+    <string name="label_distributors">تامین کنندگان</string>
+    <string name="label_remove">حذف</string>
+    <string name="label_count_of_order">تعداد سفارش: </string>
+    <string name="label_order_price_one">قیمت هر عدد: </string>
+    <string name="label_order_pack_type">نوع ظرف: </string>
+    <string name="label_order_price">مبلغ سفارش:</string>
+    <string name="label_order_count">تعداد سفارشات:</string>
+    <string name="label_order_credit">اعتبار در جورجنس</string>
+    <string name="label_order_price_sum">مجموع قابل پرداخت</string>
+    <string name="label_count_of_orders">تعداد سفارشات:</string>
+    <string name="label_cost_of_orders">هزینه سفارشات:</string>
+    <string name="label_profit_of_orders">سود سفارشات:</string>
+    <string name="label_profit_of_order">سود سفارش:</string>
+    <string name="label_confirm_order">ثبت سفارش</string>
+    <string name="label_order_show_by_distributor">مشاهده به تفکیک شرکت پخش</string>
+    <string name="label_current_order">سفارش باز</string>
+    <string name="label_past_orders">سفارشات گذشته</string>
+    <string name="label_map_orders">سفارشات روی نقشه</string>
+    <string name="label_list_orders">لیست سفارشات</string>
+    <string name="label_past_orders_favorite">سفارشات محبوب من</string>
+    <string name="label_past_orders_two_weeks">دو هفته گذشته</string>
+    <string name="label_past_orders_one_month">۱ ماه گذشته</string>
+    <string name="label_past_orders_three_months">۳ ماه گذشته</string>
+    <string name="label_past_orders_six_months">۶ ماه گذشته</string>
+    <string name="label_past_orders_one_year">۱ سال گذشته</string>
+    <string name="label_past_orders_by_month">همه سفارشات به تفکیک ماه</string>
+    <string name="label_past_orders_all">همه سفارشات به تفکیک ماه</string>
+    <string name="label_current_order_all">همه سفارش</string>
+    <string name="label_current_order_distributors">به تفکیک شرکت پخش</string>
+    <string name="label_more_details">جزيیات بیشتر</string>
+    <string name="label_show_details">مشاهده جزئیات</string>
+    <string name="label_rate_this">امتیاز دهید</string>
+    <string name="label_brands">برندها:</string>
+    <string name="label_products">محصولات:</string>
+    <string name="label_descriptions">توضیحات:</string>
+    <string name="label_less_details">جزيیات کمتر</string>
+    <string name="label_return_previous_page">بازگشت به صفحه قبل</string>
+    <string name="label_return_first_page">بازگشت به صفحه اول</string>
+    <string name="label_choose">انتخاب کنید</string>
+    <string name="label_phone">تلفن:</string>
+    <string name="label_experience">سابقه فعالیت:</string>
+    <string name="label_address">آدرس:</string>
+    <string name="label_email">ایمیل:</string>
+    <string name="word_date">تاریخ</string>
+    <string name="word_orders">سفارشات</string>
+
+    <string name="label_advanced_search">جستجوی پیشرفته</string>
+    <string name="label_in_special_pages">در صفحات ویژه</string>
+    <string name="label_based_on_category">بر اساس دسته بندی</string>
+    <string name="label_based_on_name">بر اساس نام</string>
+    <string name="label_based_on_alphabet">بر اساس حروف الفبا</string>
+    <string name="label_based_on_score">بر اساس امتیاز</string>
+    <string name="label_based_on_brand">بر اساس تولیدکننده</string>
+    <string name="label_based_on_distributor">بر اساس شرکت پخش</string>
+    <string name="label_based_on_price">بر اساس قیمت</string>
+    <string name="label_based_on_sell">بر اساس میزان فروش</string>
+    <string name="label_based_on_cost">بر اساس هزینه</string>
+    <string name="label_based_on_count">بر اساس تعداد</string>
+    <string name="label_discount_package">بسته های تخفیفی</string>
+    <string name="label_expensive_to_cheap">ارزان ترین به گران ترین</string>
+    <string name="label_cheap_to_expensive">گران ترین به ارزان ترین</string>
+    <string name="label_less_to_more">کمترین به بیشترین</string>
+    <string name="label_more_to_less">بیشترین به کمترین</string>
+
+    <string name="label_add_new_product">افزودن کالای جدید</string>
+    <string name="label_continue_without_adding_product">ثبت سفارش بدون افزودن</string>
+    <string name="label_I_received">تحویل گرفتم</string>
+
+    <string name="lbl_apply_changes">ثبت تغییرات</string>
+    <string name="lbl_change_password">تغییر رمز عبور</string>
+    <string name="lbl_current_password">رمز عبور فعلی</string>
+    <string name="lbl_new_password">رمز عبور جدید</string>
+    <string name="lbl_new_password_rep">تکرار رمز عبور جدید</string>
+    <string name="lbl_action_add">افزودن</string>
+    <string name="lbl_personal_id">کد ملی</string>
+    <string name="lbl_mobile_number">شماره موبایل</string>
+    <string name="lbl_email">ایمیل</string>
+    <string name="lbl_store_name">نام فروشگاه</string>
+    <string name="lbl_vehicle_type">نوع وسیله نقلیه</string>
+    <string name="lbl_store_address">آدرس فروشگاه</string>
+    <string name="lbl_vehicle_plaque">پلاک</string>
+    <string name="lbl_store_phone">شماره ثابت فروشگاه</string>
+    <string name="lbl_store_licence">شماره جواز کسب</string>
+
+    <!--common registration -->
+    <string name="role_store">فروشگاه/خرده فروشی</string>
+    <string name="role_distributor">شرکت پخش</string>
+    <string name="role_producer">تولید کننده</string>
+    <string name="role_delivery">مسئول تحویل کالا</string>
+    <string name="role_store_backup">پشتیبان فروشگاه</string>
+
+    <!--store registration p1 -->
+    <string name="srp1_store_name">نام فروشگاه</string>
+    <string name="srp1_telephone">شماره ثابت فروشگاه</string>
+    <string name="srp1_businessLicense">شماره پروانه کسب</string>
+    <string name="srp1_province">استان</string>
+    <string name="srp1_city">شهر</string>
+    <string name="srp1_zone">منطقه</string>
+    <string name="srp1_avenueMain">خیابان اصلی</string>
+    <string name="srp1_avenueAuxiliary">خیابان فرعی، کوچه</string>
+    <string name="srp1_plaque">پلاک</string>
+    <string name="srp1_postalCode">کد پستی</string>
+
+    <string name="lbl_action_search">جستجو</string>
+    <string name="lbl_menu_private_info">اطلاعات شخصی</string>
+    <string name="lbl_menu_store_info">اطلاعات فروشگاه </string>
+    <string name="lbl_menu_credit">اعتبار در جورجنس</string>
+    <string name="lbl_menu_turnover">گردش حساب</string>
+    <string name="lbl_menu_search">جستجوی کالا</string>
+    <string name="lbl_menu_product_return">برگشت کالا</string>
+    <string name="lbl_menu_order_list">لیست سفارشات</string>
+    <string name="lbl_menu_call_support">تماس با پشتیبانی</string>
+    <string name="lbl_menu_exit">خروج</string>
+    <string name="lbl_del_menu_order_history">تاریخچه سفارشات</string>
+    <string name="lbl_del_menu_accounting">حسابداری</string>
+    <string name="lbl_del_menu_vehicle_info">اطلاعات وسیله نقلیه</string>
+
+    <string name="lbl_turnover_money_comment">افزایش اعتبار از طریق واریز وجه</string>
+    <string name="lbl_turnover_order_comment">پرداخت هزینه سفارش</string>
+    <string name="lbl_turnover_coupon_comment">افزایش اعتبار از طریق بن خرید</string>
+
+    <string name="lbl_transaction_type">نوع تراکنش</string>
+    <string name="lbl_date_from">از تاریخ</string>
+    <string name="lbl_date_to">تا تاریخ</string>
+    <string name="lbl_action_perform_search">جستجو کن</string>
+    <string name="lbl_action_scan">اسکن بارکد</string>
+
+    <string name="lbl_product_category">دسته بندی:</string>
+    <string name="lbl_product_packing_type">نوع ظرف</string>
+    <string name="lbl_product_price">قیمت مصرف کننده:</string>
+    <string name="lbl_product_return_result">علت برگشت</string>
+
+    <string name="lbl_credit_desired">میزان دلخواه</string>
+    <string name="lbl_credit_increase">افزایش اعتبار</string>
+
+    <!--store registration p2 -->
+    <string name="srp2_managerNI">شماره ملی</string>
+    <string name="srp2_managerGT">جنسیت</string>
+    <string name="srp2_activityType">نوع فعالیت در فروشگاه</string>
+
+    <!--store registration p3 -->
+    <string name="srp3_imageBusinessLicense">تصویر جواز کسب</string>
+    <string name="srp3_managerImageNI">تصویر کارت ملی</string>
+    <string name="srp3_managerImageBC">تصویر شناسنامه (اختیاری)</string>
+
+    <!--store registration p4 -->
+    <string name="srp4_complete_msg">پس از بررسی مدارک ،کد شناسایی به فروشگاه شما اختصاص یافته و از طریق پیامها در این پنل و پیامک به شماره همراه شما ارسال خواهد شد.</string>
+
+    <!--search product-->
+    <string name="spa_product_name">نام کالا</string>
+    <string name="spa_distributor_name">نام تامین کننده</string>
+    <string name="spa_product_category">دسته کالا</string>
+    <string name="spa_products_brand">برند محصولات</string>
+    <string name="spa_barcode">بارکد</string>
+
+    <!--BottomBar-->
+
+    <!--orders-->
+    <string name="orders_list">لیست سفارشات</string>
+    <string name="order_number_label">شماره سفارش: </string>
+    <string name="product_properties">ویژگی های محصول</string>
+    <string name="package_properties">ویژگی های محصولات</string>
+    <string name="similar_product">محصولات مشابه</string>
+    <string name="similar_packages">بسته های مشابه</string>
+
+    <string name="action_discount_packs">بسته های تخفیفی</string>
+    <string name="bottomBarCompany">تأمین کنندگان</string>
+
+    <string name="dist_not_found">تأمین کننده یافت نشد</string>
+    <string name="show_dProduct_in_discount_packs">مشاهده محصول در بسته های تخفیفی</string>
+    <string name="show_dProduct_in_bundling_packs">مشاهده محصول در باندلینگ</string>
+
+    <string name="lbl_bad_user_try_to_login">تنها مدیر فروشگاه و تحویل دهنده مجاز به استفاده از ورژن موبایلی هستند.</string>
+    <string name="lbl_advertising">تبلیغات</string>
+    <string name="lbl_edit">ویرایش</string>
+    <string name="lbl_submit">ثبت</string>
+
+    <string name="msg_dist_rate_1">با سپاس از سفارش شما، لطفاً به شرکت پخش </string>
+    <string name="msg_dist_rate_2"> امتیاز دهید</string>
+    <string name="lbl_dist_rate_comment_title">علت نارضایتی</string>
+    <string name="lbl_dist_rate_comment_1">به موقع تحویل ندادند</string>
+    <string name="lbl_dist_rate_comment_2">همه سفارش را نیاوردند</string>
+    <string name="lbl_dist_rate_comment_3">بسته بندی کالاها نامناسب بود</string>
+    <string name="lbl_dist_rate_comment_4">کالای اضافه آوردند</string>
+    <string name="lbl_dist_rate_comment_5">رفتار مسئول تحویل مناسب نبود</string>
+    <string name="lbl_dist_rate_comment_6">قیمت ها مغایرت داشت</string>
+    <string name="lbl_dist_rate_comment_other">سایر دلایل ...</string>
+    <string name="btn_dist_rate_submit">ثبت نظر</string>
+
+    <string name="word_supported_areas">مناطق تحت پوشش</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+</resources>
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TextViewPlus">
+        <attr name="customFont" format="string"/>
+        <attr name="hPercent" format="float"/>
+        <attr name="wPercent" format="float"/>
+        <attr name="tv_left_margin" format="float"/>
+        <attr name="tv_right_margin" format="float"/>
+        <attr name="tv_top_margin" format="float"/>
+        <attr name="tv_bottom_margin" format="float"/>
+    </declare-styleable>
+</resources>

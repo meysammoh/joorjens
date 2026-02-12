@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="right"
+    android:paddingTop="7dp"
+    android:paddingBottom="7dp">
+
+    <ir.joorjens.joorapp.customViews.ImageViewPlus
+        app:iv_image_source="@drawable/v_arrow"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        app:iv_square="true"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="15dp"/>
+
+    <ir.joorjens.joorapp.customViews.TextViewPlus
+        style="@style/TextStyleRegular"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        android:textColor="#666"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:gravity="center_vertical" />
+
+</RelativeLayout>

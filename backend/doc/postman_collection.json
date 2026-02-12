@@ -1,0 +1,5000 @@
+{
+	"variables": [],
+	"info": {
+		"name": "joorjens",
+		"_postman_id": "88416c5a-432b-ea6c-3760-7d638736c9b9",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Advertising",
+			"description": "",
+			"item": [
+				{
+					"name": "Insert Advertising",
+					"request": {
+						"url": "http://localhost:5000/api/v1/advertising/insert/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"title\": \"عصر ایران\",\n    \"note\": \"تبلیعات عصر ایران\",\n    \"link\": \"http://asriran.ir/\",\n    \"image\": \"image/ai.gif\",\n    \"weight\": \"2\",\n    \"type\": 3281\n}"
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Update Advertising",
+					"request": {
+						"url": "http://localhost:5000/api/v1/advertising/update/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"id\": 2,\n    \"title\": \"عصر ایران\",\n    \"note\": \"تبلیعات عصر ایران\",\n    \"link\": \"http://asreiran.ir/\",\n    \"image\": \"image/ai.gif\",\n    \"weight\": \"2\",\n    \"type\": 3281\n}"
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Advertising",
+					"request": {
+						"url": "http://localhost:5000/api/v1/advertising/delete/2/",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "View Advertising",
+					"request": {
+						"url": "http://localhost:5000/api/v1/advertising/view/?id=1",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Search Advertising",
+					"request": {
+						"url": "http://localhost:5000/api/v1/advertising/search/?orderTypeId=92&asc=false&block=false",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Block Advertising",
+					"request": {
+						"url": "http://localhost:5000/api/v1/advertising/block/2/true/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"id\":1,\n    \"name\": \"تحویل دیر هنگام\",\n    \"note\": \"delayed delivering ...\"\n}\n\n"
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Click Advertising",
+					"request": {
+						"url": "http://localhost:5000/api/v1/advertising/click/1/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"id\":1,\n    \"name\": \"تحویل دیر هنگام\",\n    \"note\": \"delayed delivering ...\"\n}\n\n"
+						},
+						"description": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Area",
+			"description": "",
+			"item": [
+				{
+					"name": "Insert Area",
+					"request": {
+						"url": "http://localhost:5000/api/v1/area/insert/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"منظقه ۱\",\n  \"adType\":3013,\n  \"note\": \"مناطق تهران\",\n  \"parentId\":3012\n}\n\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Area",
+					"request": {
+						"url": "http://localhost:5000/api/v1/area/update/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\":3012,\n  \"name\": \"تهران\",\n  \"adType\":3012,\n  \"note\": \"شهر\",\n  \"parentId\":3011\n}\n\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Area",
+					"request": {
+						"url": "http://localhost:5000/api/v1/area/delete/3013/",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Block Area",
+					"request": {
+						"url": "http://localhost:5000/api/v1/area/block/3013/true/",
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "View Area",
+					"request": {
+						"url": "http://localhost:5000/api/v1/area/view/?id=3011",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Search Area",
+					"request": {
+						"url": "http://79.175.163.13:5000/api/v1/area/search/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Child Area",
+					"request": {
+						"url": "http://localhost:5000/api/v1/area/child/?parentId=3011",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Pair Area",
+					"request": {
+						"url": "http://localhost:5000/api/v1/area/pair/?adType=1012&parentId=2",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Banner",
+			"description": "",
+			"item": [
+				{
+					"name": "Insert Banner",
+					"request": {
+						"url": "http://localhost:5000/api/v1/banner/insert/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"title\": \"بنر تست 3\",\n    \"note\": \"بنری برای تست\",\n    \"link\": \"http://google.com/?q=test3\",\n    \"image\": \"image/test_banner3.png\",\n    \"weight\": \"5\"\n}"
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Update Banner",
+					"request": {
+						"url": "http://localhost:5000/api/v1/banner/update/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"id\": 3,\n    \"title\": \"بنر تست 3\",\n    \"note\": \"بنری برای تست\",\n    \"link\": \"http://google.com/?q=test3\",\n    \"image\": \"image/test_banner5.png\",\n    \"weight\": \"5\"\n}"
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Banner",
+					"request": {
+						"url": "http://localhost:5000/api/v1/banner/delete/1/",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "View Banner",
+					"request": {
+						"url": "http://localhost:5000/api/v1/banner/view/?id=1",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Search Banner",
+					"request": {
+						"url": "http://localhost:5000/api/v1/banner/search/?orderTypeId=92&asc=desc&block=false",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Block Banner",
+					"request": {
+						"url": "http://localhost:5000/api/v1/banner/block/2/true/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"id\":1,\n    \"name\": \"تحویل دیر هنگام\",\n    \"note\": \"delayed delivering ...\"\n}\n\n"
+						},
+						"description": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BonusCard",
+			"description": "",
+			"item": [
+				{
+					"name": "Insert BonusCard",
+					"request": {
+						"url": "http://localhost:5000/api/v1/bonusCard/insert/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"name\": \"کارتهای تستی\",\n    \"count\": 5,\n    \"price\": 5000,\n    \"digit\": 8,\n    \"from\": 1513859284,\n    \"to\": 1514204884,\n    \"note\": \"test\"\n}\n\n"
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Update BonusCard",
+					"request": {
+						"url": "http://localhost:5000/api/v1/bonusCard/update/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"id\": 5,\n    \"name\": \"کارتهای تستی\",\n    \"price\": 10000,\n    \"count\": 5,\n    \"digit\": 8,\n    \"from\": 1513859284,\n    \"to\": 1514204884,\n    \"note\": \"test-edit\"\n}"
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Delete BonusCard",
+					"request": {
+						"url": "http://localhost:5000/api/v1/bonusCard/delete/5/",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "View BonusCard",
+					"request": {
+						"url": "http://localhost:5000/api/v1/bonusCard/view/?id=4",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Search BonusCard",
+					"request": {
+						"url": "http://localhost:5000/api/v1/bonusCard/search/?priceFrom=10000&priceTo=10000&countFrom=1&countTo=10&digitFrom=8&digitTo=8&timeFF=1513859284&timeFT=1513859284",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Block BonusCard",
+					"request": {
+						"url": "http://localhost:5000/api/v1/bonusCard/block/5/false/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"id\":1,\n    \"name\": \"تحویل دیر هنگام\",\n    \"note\": \"delayed delivering ...\"\n}\n\n"
+						},
+						"description": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BonusCardDetail",
+			"description": "",
+			"item": [
+				{
+					"name": "Insert BonusCardDetail",
+					"request": {
+						"url": "http://localhost:5000/api/v1/bonusCardDetail/insert/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"number\": \"12345979\",\n    \"bonusCardId\": 5\n}\n\n"
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Update BonusCardDetail",
+					"request": {
+						"url": "http://localhost:5000/api/v1/bonusCardDetail/update/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 15,\n    \"number\": \"12345677\",\n    \"bonusCardId\": 5\n}"
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Use BonusCardDetail",
+					"request": {
+						"url": "http://localhost:5000/api/v1/bonusCardDetail/use/16/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 15,\n    \"number\": \"12345677\",\n    \"bonusCardId\": 5\n}"
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Delete BonusCardDetail",
+					"request": {
+						"url": "http://localhost:5000/api/v1/bonusCardDetail/delete/16/",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "View BonusCardDetail",
+					"request": {
+						"url": "http://localhost:5000/api/v1/bonusCard/view/?id=4",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Search BonusCardDetail",
+					"request": {
+						"url": "http://localhost:5000/api/v1/bonusCardDetail/search/?bonusCardId=5&number=12345979",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Block BonusCardDetail",
+					"request": {
+						"url": "http://localhost:5000/api/v1/bonusCardDetail/block/16/false/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"id\":1,\n    \"name\": \"تحویل دیر هنگام\",\n    \"note\": \"delayed delivering ...\"\n}\n\n"
+						},
+						"description": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"description": "",
+			"item": [
+				{
+					"name": "My Cart",
+					"request": {
+						"url": "http://localhost:5000/api/v1/cart/get/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Clear Cart",
+					"request": {
+						"url": "http://localhost:5000/api/v1/cart/clear/",
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Add Cart",
+					"request": {
+						"url": "http://localhost:5000/api/v1/cart/add/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "//Content-Type",
+								"value": "application/json",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"type\": 211,\n  \"count\": 17,\n  \"buyByCheck\": false,\n  \"distributorProductId\": 3,\n  \"distributorPackageId\": 2\n}"
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Cart",
+					"request": {
+						"url": "http://localhost:5000/api/v1/cart/remove/",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "//Content-Type",
+								"value": "application/json",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"type\": 111,\n  \"count\": 5,\n  \"distributorProductPackageId\": 2,\n  \"distributorPackageId\": 0\n}"
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Finalize Cart",
+					"request": {
+						"url": "http://localhost:5000/api/v1/cart/finalize/?useCredit=true",
+						"method": "POST",
+						"header": [
+							{
+								"key": "//Content-Type",
+								"value": "application/json",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Search Cart",
+					"request": {
+						"url": "http://localhost:5000/api/v1/cart/search/?timeFrom=13124123",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "View Cart",
+					"request": {
+						"url": "http://localhost:5000/api/v1/cart/view/?serial=73907-1748954325",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Favorite",
+					"request": {
+						"url": "http://79.175.163.13:5000/api/v1/cart/favorite/?orderTypeId=141&asc=false",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Update CartPackduct",
+					"request": {
+						"url": "http://localhost:5000/api/v1/cart/update/1114/12/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "//Content-Type",
+								"value": "application/json",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateBatch CartPackduct",
+					"request": {
+						"url": "http://localhost:5000/api/v1/cart/updateBatch/1129/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n\t11\n]"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateBatch CartDist",
+					"request": {
+						"url": "http://localhost:5000/api/v1/cart/updateBatchDist/1129/12/",
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"description": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CartDistributor",
+			"description": "",
+			"item": [
+				{
+					"name": "Search Cart copy",
+					"request": {
+						"url": "http://localhost:5000/api/v1/cartDistributor/search/?distributorId=12",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cartable",
+			"description": "",
+			"item": [
+				{
+					"name": "Approve Cartable",
+					"request": {
+						"url": "http://localhost:5000/api/v1/cartable/approve/4/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "//Content-Type",
+								"value": "application/json",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"id\": 0,\n    \"name\": \"فروشگاه مریم\",\n    \"telephone\": \"02144556677\",\n    \"businessLicense\": \"IDKnow\",\n    \"postalCode\": \"1234567890\",\n    \"activityType\": 3101,\n    \"note\": \"این است فروشگاه من!\",\n    \"avenueMain\": \"خ اصلی\",\n    \"avenueAuxiliary\": \"خ فرعی\",\n    \"addressRemnant\": \"بقیه آدرس\",\n    \"plaque\": \"12\",\n    \"areaZoneId\": 3013,\n    \"managerId\": 1,\n    \"managerNI\": \"1699957495\",\n    \"managerGT\": 3021,\n    \"managerImageP\": \"image/139626/temporary_3ecdd18e-2e7f-4951-9738-920a5e0bca97_profile@1.png\",\n    \"managerImageBC\": \"image/139626/3ecdd18e-2e7f-4951-9738-920a5e0bca97_birthCertificate@1.png\",\n    \"managerImageNI\": \"image/139626/3ecdd18e-2e7f-4951-9738-920a5e0bca97_nationalIdentifier@1.png\",\n    \"imageBusinessLicense\": \"image/139626/3ecdd18e-2e7f-4951-9738-920a5e0bca97_businessLicense@1.png\"\n  },\n  {\n    \"id\": 0,\n    \"name\": \"شرکت پخش مریم\",\n    \"note\": \"این است شرکت پخش تو!\",\n    \"type\": 3121,\n    \"activityType\": 3101,\n    \"registrationNumber\": \"IDKnow\",\n    \"telephone\": \"02144556677\",\n    \"fax\": \"02144556677\",\n    \"site\": \"http://www.test.ir\",\n    \"email\": \"khalil.alijani@gmail.com\",\n    \"imageStatute\": \"image/139626/3ecdd18e-2e7f-4951-9738-920a5e0bca97_statute@1.png\",\n    \"addressRemnant\": \"بقیه آدرس\",\n    \"areaCityId\": 3012,\n    \"managerId\": 3,\n    \"managerNI\": \"1690090545\",\n    \"managerImageP\": \"image/139626/3ecdd18e-2e7f-4951-9738-920a5e0bca97_profile@1.png\",\n    \"managerImageNI\": \"image/139626/3ecdd18e-2e7f-4951-9738-920a5e0bca97_nationalIdentifier@1.png\"\n  },\n  {\n    \"id\": 0,\n    \"name\": \"شرکت پخش مریم - شعبه ۱\",\n    \"note\": \"این است شرکت پخش تو!\",\n    \"type\": 3122,\n    \"activityType\": 3101,\n    \"registrationNumber\": \"IDKnow\",\n    \"telephone\": \"02144556677\",\n    \"fax\": \"02144556677\",\n    \"site\": \"http://www.test.ir\",\n    \"email\": \"khalil.alijani@gmail.com\",\n    \"imageStatute\": \"image/139626/3ecdd18e-2e7f-4951-9738-920a5e0bca97_statute@1.png\",\n    \"addressRemnant\": \"بقیه آدرس\",\n    \"areaCityId\": 3012,\n    \"managerId\": 4,\n    \"managerNI\": \"0010532129\",\n    \"managerImageP\": \"image/139626/3ecdd18e-2e7f-4951-9738-920a5e0bca97_profile@1.png\",\n    \"managerImageNI\": \"image/139626/3ecdd18e-2e7f-4951-9738-920a5e0bca97_nationalIdentifier@1.png\",\n    \"parentSerial\": \"5867-88695563\"\n  }\n]"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Reject Cartable",
+					"request": {
+						"url": "http://localhost:5000/api/v1/cartable/reject/3/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/plain",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "test"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Search Cartable",
+					"request": {
+						"url": "http://localhost:5000/api/v1/cartable/search/?type=3051&status=3041&priority=3032&toJoorJens=true&fromCustomerId=2",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "View Cartable",
+					"request": {
+						"url": "http://localhost:5000/api/v1/cartable/view/?id=1",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ColorType",
+			"description": "",
+			"item": [
+				{
+					"name": "Insert ColorType",
+					"request": {
+						"url": "http://localhost:5000/api/v1/colorType/insert/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"name\": \"قرمز\",\n    \"code\": \"#1234568\",\n    \"note\": \"red\"\n}\n\n"
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Update ColorType",
+					"request": {
+						"url": "http://localhost:5000/api/v1/colorType/update/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 2,\n  \"name\": \"قرمز\",\n  \"code\": \"#2234568\",\n  \"note\": \"red\"\n}"
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Delete ColorType",
+					"request": {
+						"url": "http://localhost:5000/api/v1/colorType/delete/1/",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "View ColorType",
+					"request": {
+						"url": "http://localhost:5000/api/v1/colorType/view/?id=1",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Search ColorType",
+					"request": {
+						"url": "http://localhost:5000/api/v1/colorType/search/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Pair ColorType",
+					"request": {
+						"url": "http://localhost:5000/api/v1/colorType/pair/?block=false",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Block ColorType",
+					"request": {
+						"url": "http://localhost:5000/api/v1/colorType/block/2/true/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"id\":1,\n    \"name\": \"تحویل دیر هنگام\",\n    \"note\": \"delayed delivering ...\"\n}\n\n"
+						},
+						"description": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ConfigEnum",
+			"description": "",
+			"item": [
+				{
+					"name": "All",
+					"request": {
+						"url": "http://185.2.15.134:5000/api/v1/configEnum/all/",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Main",
+					"request": {
+						"url": " http://79.175.163.13:5000/api/v1/configEnum/main/",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Hierarchical",
+					"request": {
+						"url": " http://79.175.163.13:5000/api/v1/configEnum/hierarchical/?typeIds=1310",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Roles",
+					"request": {
+						"url": " http://79.175.163.13:5000/api/v1/configEnum/roles/1071/",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ConfigField",
+			"description": "",
+			"item": [
+				{
+					"name": "Update ConfigField",
+					"request": {
+						"url": "http://localhost:5000/api/v1/configField/update/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 2014,\n  \"name\": \"مقدار اعتبار خرید اولیه\",\n  \"value\": 100000,\n  \"note\": \"Config First Credit\"\n}\n\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "View ConfigField",
+					"request": {
+						"url": "http://localhost:5000/api/v1/configField/view/?id=2014",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Search ConfigField",
+					"request": {
+						"url": "http://localhost:5000/api/v1/configField/search/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Pair ConfigField",
+					"request": {
+						"url": "http://localhost:5000/api/v1/configField/pair/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"description": "",
+			"item": [
+				{
+					"name": "Update Customer",
+					"request": {
+						"url": "http://localhost:5000/api/v1/customer/update/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "//Content-Type",
+								"value": "application/json",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\":1,\n  \"mobileNumber\": \"09141184045\",\n  \"nationalIdentifier\": \"1699957495\",\n  \"firstName\": \"khalil\",\n  \"lastName\": \"alijani\",\n  \"fatherName\": \"faraj\",\n  \"genderType\": 3021,\n  \"birthTime\": 0,\n  \"email\": \"khalil.alijani@gmail.com\",\n  \"addressRemnant\": \"خیابان امام خمینی\",\n  \"roleId\":1071\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Profile Customer",
+					"request": {
+						"url": "http://localhost:5000/api/v1/customer/profile/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "mobileNumber",
+									"value": "09141184045",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "firstName",
+									"value": "عباس",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "lastName",
+									"value": "آذران",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "View Customer",
+					"request": {
+						"url": "http://localhost:5000/api/v1/customer/view/?id=1",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "mobileNumber",
+									"value": "09141184045",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "firstName",
+									"value": "عباس",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "lastName",
+									"value": "آذران",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Search Customer",
+					"request": {
+						"url": "http://localhost:5000/api/v1/customer/search/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "mobileNumber",
+									"value": "09141184045",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "firstName",
+									"value": "عباس",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "lastName",
+									"value": "آذران",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Pair Customer",
+					"request": {
+						"url": "http://localhost:5000/api/v1/customer/pair/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "mobileNumber",
+									"value": "09141184045",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "firstName",
+									"value": "عباس",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "lastName",
+									"value": "آذران",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "ResetPassword Customer",
+					"request": {
+						"url": "http://localhost:5000/api/v1/customer/resetPassword/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "//Content-Type",
+								"value": "application/json",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"password\":\"Joorjens@123\",\n  \"passwordNew\":\"Joorjens@123456\",\n  \"passwordRepeat\":\"Joorjens@123456\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Logout Customer",
+					"request": {
+						"url": "http://localhost:5000/api/v1/customer/logout/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.5) Gecko/2008121718 Gentoo Firefox/3.0.5",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer Public AAA",
+			"description": "",
+			"item": [
+				{
+					"name": "SignUp CPAAA",
+					"request": {
+						"url": "http://79.175.163.13:5000/api/v1/customer/signup/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "//Content-Type",
+								"value": "application/json",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"mobileNumber\": \"09141184047\",\n  \"email\":\"khalil.alijani@yahoo.com\",\n  \"password\":\"Joorjens@123\",\n  \"passwordRepeat\":\"Joorjens@123\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "ResendActivationCode CPAAA",
+					"request": {
+						"url": "http://localhost:5000/api/v1/customer/resendActivationCode/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "//Content-Type",
+								"value": "application/json",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"mobileNumber\": \"09141184045\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Activate CPAAA",
+					"request": {
+						"url": "http://79.175.163.13:5000/api/v1/customer/activate/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "//Content-Type",
+								"value": "application/json",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"mobileNumber\": \"09141184047\",\n  \"activationCode\": 414772\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "ForgetPassword CPAAA",
+					"request": {
+						"url": "http://localhost:5000/api/v1/customer/forgetPassword/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "//Content-Type",
+								"value": "application/json",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"mobileNumber\": \"09141184045\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "ForgetPasswordVerify CPAAA",
+					"request": {
+						"url": "http://localhost:5000/api/v1/customer/forgetPasswordVerify/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "//Content-Type",
+								"value": "application/json",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"mobileNumber\": \"09141184045\",\n  \"resetPasswordCode\":836369,\n  \"password\":\"Joorjens@123456\",\n  \"passwordRepeat\":\"Joorjens@123456\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Login CPAAA",
+					"request": {
+						"url": "http://185.2.15.134:5000/api/v1/customer/login/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.5) Gecko/2008121718 Gentoo Firefox/3.0.5",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"mobileNumber\": \"09129999999\",\n  \"password\":\"Joorjens@123\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CustomerLogin",
+			"description": "",
+			"item": [
+				{
+					"name": "Insert CustomerLogin",
+					"request": {
+						"url": "http://localhost:5000/api/v1/customerLogin/insert/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"loginTime\": 1497833294,\n    \"logoutTime\": 1497933294,\n    \"idlePeriod\": 20,\n    \"customerSessionId\": 1\n}\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update CustomerLogin",
+					"request": {
+						"url": "http://localhost:5000/api/v1/customerLogin/update/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 5,\n    \"loginTime\": 1497833294,\n    \"logoutTime\": 1497933294,\n    \"idlePeriod\": 30\n}\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete CustomerLogin",
+					"request": {
+						"url": "http://localhost:5000/api/v1/customerLogin/delete/1/",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 1,\n  \"logoutTime\": 1498830897,\n  \"idlePeriod\": 60\n}\n\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "View CustomerLogin",
+					"request": {
+						"url": "http://localhost:5000/api/v1/customerLogin/view/?id=1",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "mobileNumber",
+									"value": "09141184045",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "firstName",
+									"value": "عباس",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "lastName",
+									"value": "آذران",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Search CustomerLogin",
+					"request": {
+						"url": "http://localhost:5000/api/v1/customerLogin/search/?customerId=2",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "mobileNumber",
+									"value": "09141184045",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "firstName",
+									"value": "عباس",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "lastName",
+									"value": "آذران",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CustomerSession",
+			"description": "",
+			"item": [
+				{
+					"name": "Delete CustomerSession",
+					"request": {
+						"url": "http://localhost:5000/api/v1/customerSession/delete/1/",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "View CustomerSession",
+					"request": {
+						"url": "http://localhost:5000/api/v1/customerSession/view/?id=1",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "mobileNumber",
+									"value": "09141184045",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "firstName",
+									"value": "عباس",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "lastName",
+									"value": "آذران",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Search CustomerSession",
+					"request": {
+						"url": "http://localhost:5000/api/v1/customerSession/search/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "mobileNumber",
+									"value": "09141184045",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "firstName",
+									"value": "عباس",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "lastName",
+									"value": "آذران",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dashboard",
+			"description": "",
+			"item": [
+				{
+					"name": "Dashboard Sale",
+					"request": {
+						"url": "http://localhost:5000/api/v1/dashboard/sale/?timeStampId=74&byArea=true",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Dashboard Order",
+					"request": {
+						"url": "http://localhost:5000/api/v1/dashboard/order/?timeStampId=74&byArea=true",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Dashboard Product",
+					"request": {
+						"url": "http://79.175.163.13:5000/api/v1/dashboard/product/",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dictionary",
+			"description": "",
+			"item": [
+				{
+					"name": "Insert Dictionary",
+					"request": {
+						"url": "http://localhost:5000/api/v1/dictionary/insert/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"name\": \"بازرکد\",\n    \"note\": \"بارکد موجود در پشت کالا\"\n}"
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Update Dictionary",
+					"request": {
+						"url": "http://localhost:5000/api/v1/dictionary/update/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"id\": 1,\n    \"name\": \"بارکد\",\n    \"note\": \"شکل کامپیوتری موجود در پشت کالا\"\n}"
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Dictionary",
+					"request": {
+						"url": "http://localhost:5000/api/v1/dictionary/delete/3/",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "View Dictionary",
+					"request": {
+						"url": "http://localhost:5000/api/v1/dictionary/view/?name=بارکد",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Search Dictionary",
+					"request": {
+						"url": "http://localhost:5000/api/v1/dictionary/search/?block=true",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Block Dictionary",
+					"request": {
+						"url": "http://localhost:5000/api/v1/dictionary/block/1/true/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"id\":1,\n    \"name\": \"تحویل دیر هنگام\",\n    \"note\": \"delayed delivering ...\"\n}\n\n"
+						},
+						"description": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Distributor",
+			"description": "",
+			"item": [
+				{
+					"name": "Insert Distributor",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributor/insert/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "//Content-Type",
+								"value": "application/json",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\":0,\n  \"name\":\"شرکت پخش مریم - شعبه ۱\",\n  \"telephone\": \"02144556677\",\n  \"fax\": \"02144556677\",\n  \"registrationNumber\": \"IDKnow\",\n  \"site\": \"http://www.test.ir\",\n  \"email\": \"khalil.alijani@gmail.com\",\n  \n  \"type\":3121,\n\n  \"contractType\":3161,\n  \"settlementDays\":5,\n  \"settlementDaysJoorJens\":10,\n\n  \"settlementTypes\":[1131,1132],\n\n  \"note\": \"این است شرکت پخش تو!\",\n  \"areaCityId\": 3012,\n  \"addressRemnant\":\"بقیه آدرس\",\n  \"managerId\":3,\n  \"managerNI\":\"0902433016\",\n  \"managerImageP\":\"image/139626/3ecdd18e-2e7f-4951-9738-920a5e0bca97_profile@1.png\",\n  \"managerImageBC\":\"image/139626/3ecdd18e-2e7f-4951-9738-920a5e0bca97_birthCertificate@1.png\",\n  \"managerImageNI\":\"image/139626/3ecdd18e-2e7f-4951-9738-920a5e0bca97_nationalIdentifier@1.png\",\n  \"imageStatute\":\"image/139626/3ecdd18e-2e7f-4951-9738-920a5e0bca97_statute@1.png\",\n  \n  \"activityTypes\": [\n    {\n      \"id\": 1213\n    }\n  ]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Distributor",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributor/update/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "//Content-Type",
+								"value": "application/json",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\":3,\n  \"name\":\"شرکت پخش مریم - شعبه ۱\",\n  \"telephone\": \"02144556677\",\n  \"fax\": \"02144556677\",\n  \"registrationNumber\": \"IDKnow\",\n  \"site\": \"http://www.test.ir\",\n  \"email\": \"khalil.alijani@gmail.com\",\n  \n  \"type\":3121,\n  \"parentSerial\": \"5867-88695563\",\n  \n  \"activityType\":3101,\n  \"contractType\":3161,\n  \"settlementDays\":5,\n  \"settlementDaysJoorJens\":10,\n\n  \"settlementTypes\":[\n    {\"id\":1131},\n    {\"id\":1132}\n  ],\n  \"activityTypes\": [\n    {\"id\": 1213}\n  ],\n\n  \"note\": \"این است شرکت پخش تو!\",\n  \"areaCityId\": 3012,\n  \"addressRemnant\":\"بقیه آدرس\",\n  \"managerId\":3,\n  \"managerNI\":\"0083314237\",\n  \"managerImageP\":\"image/139626/3ecdd18e-2e7f-4951-9738-920a5e0bca97_profile@1.png\",\n  \"managerImageBC\":\"image/139626/3ecdd18e-2e7f-4951-9738-920a5e0bca97_birthCertificate@1.png\",\n  \"managerImageNI\":\"image/139626/3ecdd18e-2e7f-4951-9738-920a5e0bca97_nationalIdentifier@1.png\",\n  \"imageStatute\":\"image/139626/3ecdd18e-2e7f-4951-9738-920a5e0bca97_statute@1.png\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Distributor",
+					"request": {
+						"url": "http://79.175.163.13:5000/api/v1/distributor/delete/1/",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "//Content-Type",
+								"value": "application/json",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Search Distributor",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributor/search/?ordertypeid=95,94&asc=false&productCategoryTypeId=1211",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "View Distributor",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributor/view/?id=3",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Pair Distributor",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributor/pair/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Exist Distributor",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributor/exist/?serial=5867-88695563",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Insert Distributor Area",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributor/insertBranch/1/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "//Content-Type",
+								"value": "application/json",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  3013,3012\n]"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Distributor Area",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributor/deleteBranch/1/",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "//Content-Type",
+								"value": "application/json",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  3013,3012\n]"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DistributorDeliverer",
+			"description": "",
+			"item": [
+				{
+					"name": "Insert DistributorDel",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributorDeliverer/insert/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"id\":0,\n  \"workFrom\":8,\n  \"workTo\":20,\n  \"mobileNumber\":\"09121184063\",\n  \"nationalIdentifier\":\"0070165981\",\n  \"firstName\":\"TestDel2\",\n  \"lastName\":\"Deliverer2\",\n    \"fatherName\": \"godFather2\",\n    \"genderType\":3021,\n    \"birthTime\":123456789,\n    \"imageProfile\":\"/image/a.png\",\n    \"email\": \"khalil.alijani@gmail.com\",\n    \"note\":\"NOTE\",\n    \"distributorId\":1,\n    \"vehicleId\":1,\n    \"password\":\"Joorjens@123\",\n    \"passwordRepeat\":\"Joorjens@123\"\n}\n\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update DistributorDel",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributorDeliverer/update/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"id\":19,\n  \"workFrom\":8,\n  \"workTo\":20,\n  \"mobileNumber\":\"09121184063\",\n  \"nationalIdentifier\":\"0070165981\",\n  \"firstName\":\"TestDel2\",\n  \"lastName\":\"Deliverer2\",\n    \"fatherName\": \"godFather2\",\n    \"genderType\":3021,\n    \"birthTime\":123456789,\n    \"imageProfile\":\"/image/a.png\",\n    \"email\": \"khalil.alijani@gmail.com\",\n    \"note\":\"NOTE\",\n    \"distributorId\":1,\n    \"vehicleId\":1,\n    \"password\":\"Joorjens@123\",\n    \"passwordRepeat\":\"Joorjens@123\"\n}\n\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "View DistributorDel",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributorDeliverer/view/?id=2",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Search DistributorDel",
+					"request": {
+						"url": "http://79.175.163.13:5000/api/v1/distributorDeliverer/search/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Pair DistributorDel",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributorDeliverer/pair/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DistributorDiscontentType",
+			"description": "",
+			"item": [
+				{
+					"name": "Insert DistributorDT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributorDiscontentType/insert/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"name\": \"تحویل دیر هنگام\",\n    \"note\": \"delayed delivering\"\n}\n\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update DistributorDT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributorDiscontentType/update/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"id\":1,\n    \"name\": \"تحویل دیر هنگام\",\n    \"note\": \"delayed delivering ...\"\n}\n\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete DistributorDiscontentType",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributorDiscontentType/delete/1/",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "View DistributorDT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributorDiscontentType/view/?id=2",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Search DistributorDT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributorDiscontentType/search/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Pair DistributorDT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributorDiscontentType/pair/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DistributorEmployee",
+			"description": "",
+			"item": [
+				{
+					"name": "Insert DistributorEmp",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributorEmployee/insert/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"id\":0,\n  \"mobileNumber\":\"09121184052\",\n  \"nationalIdentifier\":\"1092106324\",\n  \"firstName\":\"TestDel\",\n  \"lastName\":\"Employee\",\n    \"fatherName\": \"godFather\",\n    \"genderType\":3021,\n    \"birthTime\":123456789,\n    \"imageProfile\":\"/image/a.png\",\n    \"email\": \"khalil.alijani@gmail.com\",\n    \"note\":\"NOTE\",\n    \"distributorId\":9,\n    \"roleId\":1053,\n    \"password\":\"Joorjens@123\",\n    \"passwordRepeat\":\"Joorjens@123\"\n}\n\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update DistributorEmp",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributorEmployee/update/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"id\":12,\n  \"mobileNumber\":\"09121184051\",\n  \"nationalIdentifier\":\"0942491025\",\n  \"firstName\":\"TestDel\",\n  \"lastName\":\"Employee\",\n    \"fatherName\": \"godFather\",\n    \"genderType\":3021,\n    \"birthTime\":123456789,\n    \"imageProfile\":\"/image/a.png\",\n    \"email\": \"khalil.alijani@gmail.com\",\n    \"note\":\"NOTE\",\n    \"distributorId\":9,\n    \"roleId\":1053\n}\n\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "View DistributorEmp",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributorEmployee/view/?id=3",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Search DistributorEmp",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributorEmployee/search/?roleId=1051&distributorId=9",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Pair DistributorEmp",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributorEmployee/pair/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DistributorPackage",
+			"description": "",
+			"item": [
+				{
+					"name": "Insert DistributorPackage",
+					"request": {
+						"url": "http://79.175.163.13:5000/api/v1/distributorPackage/insert/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 0,\n  \"bundlingOrDiscount\":true,\n  \"name\": \"اولین باندلینگ\",\n  \"from\": 1510864200,\n  \"to\": 1511728200,\n  \"image\":\"image/543656.jpg\",\n  \n  \"distributorId\":1,\n  \n  \"packageProducts\": [\n    {\n      \"id\":0,\n      \"count\":1,\n      \"discountPercent\":0,\n      \"distributorProductId\":1\n    },\n    {\n      \"id\":0,\n      \"count\":1,\n      \"discountPercent\":0,\n      \"distributorProductId\":4\n    },\n    {\n      \"id\":0,\n      \"count\":2,\n      \"discountPercent\":0,\n      \"distributorProductId\":5\n    }\n  ]\n}\n\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update DistributorPackage",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributorPackage/update/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 1,\n  \"bundlingOrDiscount\":false,\n  \"name\": \"name\",\n  \"from\": 1,\n  \"to\": 135674891,\n  \"image\":\"image/543656.jpg\",\n  \n  \"distributorId\":13,\n  \n  \"packageProducts\": [\n    {\n      \"id\":1,\n      \"count\":2,\n      \"discountPercent\":10,\n      \"distributorProductId\":1\n    },\n    {\n      \"id\":2,\n      \"count\":1,\n      \"discountPercent\":10,\n      \"distributorProductId\":3\n    }\n  ]\n}\n\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete DistributorPackage",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributorPackage/delete/1/",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "View DistributorPackage",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributorPackage/view/?id=2",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Search DistributorPackage",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributorPackage/search/?bundlingOrDiscount=false&productId=5",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Block DistributorPackage",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributorPackage/block/2/true/",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "countProductIn DistributorPackage",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributorPackage/productCountIn/?bundlingOrDiscount=false&productId=1",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DistributorProduct",
+			"description": "",
+			"item": [
+				{
+					"name": "Insert DisProdoct",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributorProduct/insert/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 0,\n  \"onlyBundling\":true,\n  \"price\":1700,\n  \"settlementPercent\":2.5,\n  \"stock\":100,\n  \"stockWarn\":10,\n  \"minOrder\":2,\n  \n  \"productId\":2,\n  \"distributorId\":1,\n  \n  \"packages\": [\n    {\n      \"id\":0,\n      \"countFrom\":12,\n      \"countTo\": 24,\n      \"percent\":5\n      \n    },\n    {\n      \"id\":0,\n      \"countFrom\":24,\n      \"percent\":5,\n      \"countTo\": 32\n    }\n  ],\n  \n  \"discounts\": [\n    {\n      \"id\":0,\n      \"type\":3241,\n      \"priceOrCount\":20,\n      \"priceOrCountOrPercent\":2,\n      \"from\":1510864200,\n      \"to\":1511728200\n    }\n  ]\n}\n\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update DisProdoct",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributorProduct/update/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 3,\n  \"onlyBundling\":false,\n  \"price\":12300,\n  \"settlementPercent\":2.0,\n  \"stock\":100,\n  \"stockWarn\":10,\n  \"minOrder\":2,\n  \n  \"productId\":2,\n  \"distributorId\":13,\n  \n  \"packages\": [\n    {\n      \"id\":2,\n      \"countTo\":24,\n      \"countFrom\":12,\n      \"percent\":15\n    },\n    {\n      \"id\":0,\n      \"countFrom\":24,\n      \"countTo\":32,\n      \"percent\":17\n    }\n  ],\n  \n  \"discounts\": [\n    {\n      \"id\":2,\n      \"type\":3241,\n      \"priceOrCount\":20,\n      \"priceOrCountOrPercent\":2,\n      \"from\":21,\n      \"to\":21234\n    }\n  ]\n}\n\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete DisProdoct",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributorProduct/delete/3013/",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Block DisProdoct",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributorProduct/block/1/false/",
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Price DisProdoct",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributorProduct/price/3/12200/",
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "View DisProdoct",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributorProduct/view/?id=1",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Search DisProdoct",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributorProduct/search/?productCategoryTypeId=2,3&typesareparent=true&onlyStocks=true&ordreTypeId=131&asc=true",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Pair DisProdoct",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributorProduct/pair/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DistributorProductPriceHistory",
+			"description": "",
+			"item": [
+				{
+					"name": "Search DisProductPHis",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributorProductPriceHistory/search/?productId=1&barcode=1234567",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DistributorRateDiscontent",
+			"description": "",
+			"item": [
+				{
+					"name": "Update DistributorRD",
+					"request": {
+						"url": "http://79.175.163.13:5000/api/v1/distributorRateDiscontent/upsert/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"rate\": 3.5,\n    \"comment\": \"OK\",\n    \"distributorId\": 2,\n    \"cartId\": 20,\n    \"distributorDiscontentTypes\": [\n      {\"id\":1},{\"id\":2}\n      ]\n}\n\n"
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Rated DistributorRD",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributorRateDiscontent/rated/3/13/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Search DistributorRD",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributorRateDiscontent/search/?cartId=0&distributorId=13",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "View DistributorRD",
+					"request": {
+						"url": "http://localhost:5000/api/v1/distributorRateDiscontent/view/?id=2",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Log",
+			"description": "",
+			"item": [
+				{
+					"name": "Search Log",
+					"request": {
+						"url": "http://localhost:5000/api/v1/log/search/?resultType=128&actionType=113&customerId=0&className=Area",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Message",
+			"description": "",
+			"item": [
+				{
+					"name": "Insert Message",
+					"request": {
+						"url": "http://localhost:5000/api/v1/message/insert/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "//Content-Type",
+								"value": "application/json",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Title 1\",\n  \"text\": \"body 1\",\n  \n  \"messageReceivers\": [\n    {\n      \"id\": 0,\n      \"messageType\": 3251,\n      \"receiverDistributorId\": 1\n    }\n    , {\n      \"id\": 0,\n      \"messageType\": 3253,\n      \"receiverStoreId\": 5\n    }\n    , {\n      \"id\": 0,\n      \"messageType\": 3253,\n      \"receiverId\": 19\n    }\n    , {\n      \"id\": 0,\n      \"messageType\": 3253\n    }\n  ]\n}"
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Update Message",
+					"request": {
+						"url": "http://localhost:5000/api/v1/message/update/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "//Content-Type",
+								"value": "application/json",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 1,\n  \"title\": \"Title 2\",\n  \"text\": \"body 1\",\n  \n  \"messageReceivers\": [\n    {\n      \"id\": 3,\n      \"messageType\": 3251,\n      \"receiverId\": 17\n    }\n    , {\n      \"id\": 2,\n      \"messageType\": 3253,\n      \"receiverId\": 18\n    }\n    , {\n      \"id\": 0,\n      \"messageType\": 3253,\n      \"receiverId\": 19\n    }\n  ]\n}"
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Message",
+					"request": {
+						"url": "http://localhost:5000/api/v1/message/delete/1/",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "//Content-Type",
+								"value": "application/json",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Search Message",
+					"request": {
+						"url": "http://localhost:5000/api/v1/message/search/?receiverDistributorId=1&send=false",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "View Message",
+					"request": {
+						"url": "http://localhost:5000/api/v1/message/view/?id=1",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Seen MessageReceiver",
+					"request": {
+						"url": "http://localhost:5000/api/v1/message/receiver/seen/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "//Content-Type",
+								"value": "application/json",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  [1, 2]\n  ,[1, 3]\n]"
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Delete MessageReceiver",
+					"request": {
+						"url": "http://localhost:5000/api/v1/message/receiver/delete/",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "//Content-Type",
+								"value": "application/json",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  [1, 2]\n  ,[1, 3]\n]"
+						},
+						"description": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "OrderSettlementType",
+			"description": "",
+			"item": [
+				{
+					"name": "Update OrderSTT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/orderSettlementType/update/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"id\": 1131,\n    \"name\": \"آنلاین\",\n    \"note\": \"Online\"\n}\n\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "View OrderSTT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/orderSettlementType/view/?id=1131",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Search OrderSTT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/orderSettlementType/search/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Pair OrderSTT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/orderSettlementType/pair/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "OrderStatusType",
+			"description": "",
+			"item": [
+				{
+					"name": "Update OrderST",
+					"request": {
+						"url": "http://localhost:5000/api/v1/orderStatusType/update/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"id\": 1115,\n    \"name\": \"تحویل داده شده\",\n    \"note\": \"Delivered\"\n}\n\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "View OrderST",
+					"request": {
+						"url": "http://localhost:5000/api/v1/orderStatusType/view/?id=1115",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Search OrderST",
+					"request": {
+						"url": "http://localhost:5000/api/v1/orderStatusType/search/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Pair OrderST",
+					"request": {
+						"url": "http://localhost:5000/api/v1/orderStatusType/pair/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Permission",
+			"description": "",
+			"item": [
+				{
+					"name": "Insert Permission",
+					"request": {
+						"url": "http://localhost:5000/api/v1/permission/insert/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 0,\n  \"key\": \"Menu_x\",\n  \"url\": null,\n  \"name\": \"منوی جدید\",\n  \"justLogin\": false,\n  \"noLogin\": false\n}\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "َUpdate Permission",
+					"request": {
+						"url": "http://localhost:5000/api/v1/permission/update/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 10063,\n  \"key\": \"Menu_x\",\n  \"url\": null,\n  \"name\": \"منوی تازه\",\n  \"justLogin\": false,\n  \"noLogin\": false\n}\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Permission",
+					"request": {
+						"url": "http://localhost:5000/api/v1/permission/delete/10063/",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "View Permission",
+					"request": {
+						"url": "http://localhost:5000/api/v1/permission/view/?id=10063",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Rider",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "permission",
+									"value": "somthing in json",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Search Permission",
+					"request": {
+						"url": "http://localhost:5000/api/v1/permission/search/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Rider",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "permission",
+									"value": "somthing in json",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Pair Permission",
+					"request": {
+						"url": "http://localhost:5000/api/v1/permission/pair/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Rider",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "permission",
+									"value": "somthing in json",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Position",
+			"description": "",
+			"item": [
+				{
+					"name": "add Position",
+					"request": {
+						"url": "http://localhost:5000/api/v1/position/add/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"latitude\":35.751,\n  \"longitude\": 51.345\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Search Position",
+					"request": {
+						"url": "http://localhost:5005/api/v1/position/search/?customerId=1000&timeDay=1503238277&timeHOUR=14:20:10:01",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"description": "",
+			"item": [
+				{
+					"name": "Insert Prodoct",
+					"request": {
+						"url": "http://localhost:5000/api/v1/product/insert/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 0,\n  \"barcode\": \"1234567\",\n  \"name\": \"کالای تستی\",\n  \"note\": \"همینطوری\",\n  \"priceConsumer\": 12000,\n  \"productBrandTypeId\":3223,\n  \"productBrandTypeNameTyped\": null,\n  \"productCategoryTypeId\":1211,\n  \"productDetails\": [\n    {\n      \"id\":0,\n      \"productDetailTypeId\":1214,\n      \"value\":21\n    },\n    {\n      \"id\":0,\n      \"productDetailTypeId\":1211,\n      \"description\": \"Blue\"\n    }\n  ],\n  \"image\":\"\"\n}\n\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Prodoct",
+					"request": {
+						"url": "http://localhost:5000/api/v1/product/update/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 1,\n  \"barcode\": \"1234567\",\n  \"name\": \"کالای تستی\",\n  \"note\": \"همینطوری\",\n  \"priceConsumer\": 12000,\n  \"productBrandTypeId\":3223,\n  \"productCategoryTypeId\":1211,\n  \"productDetails\": [\n    {\n      \"id\":2,\n      \"productDetailTypeId\":1214,\n      \"value\":22\n    },\n    {\n      \"id\":1,\n      \"productDetailTypeId\":1211,\n      \"description\": \"Blue\"\n    }\n  ],\n  \"image\":\"\"\n}\n\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Prodoct",
+					"request": {
+						"url": "http://localhost:5000/api/v1/product/delete/3013/",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Block Prodoct",
+					"request": {
+						"url": "http://localhost:5000/api/v1/product/block/3013/true/",
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Price Prodoct",
+					"request": {
+						"url": "http://localhost:5000/api/v1/product/price/1/12250/",
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Price Prodoct Batch",
+					"request": {
+						"url": "http://localhost:5000/api/v1/product/price/batch/",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  1234567   , 2000   \n12345678,   18000   \n\n\n\n\n"
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "View Prodoct",
+					"request": {
+						"url": "http://localhost:5000/api/v1/product/view/?id=1",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Search Prodoct",
+					"request": {
+						"url": "http://79.175.163.13:5000/api/v1/product/search/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Pair Prodoct",
+					"request": {
+						"url": "http://localhost:5000/api/v1/product/pair/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Exist Prodoct",
+					"request": {
+						"url": "http://localhost:5000/api/v1/product/exist/?barcode=1234567",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ProductBrandType",
+			"description": "",
+			"item": [
+				{
+					"name": "Insert ProdoctBT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/productBrandType/insert/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\":0,\n  \"name\": \"موتوری\",\n  \"weight\": 10,\n  \"pbType\":3222,\n  \"note\": \"توضیح\",\n  \"parentId\":3221,\n  \"productCategoryTypes\": [\n  \t{\"id\": 1213},{\"id\": 1216}\n  ]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update ProdoctBT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/productBrandType/update/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\":3223,\n  \"name\": \"موتوری\",\n  \"weight\": 10,\n  \"pbType\":3222,\n  \"note\": \"توضیح\",\n  \"parentId\":3221,\n  \"productCategoryTypes\": [\n  \t{\"id\": 1213},{\"id\": 1216}\n  ]\n}\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete ProdoctBT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/productBrandType/delete/3013/",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Block ProdoctBT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/productBrandType/block/3013/true/",
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "View ProdoctBT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/productBrandType/view/?id=3222",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Search ProdoctBT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/productBrandType/search/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Child ProdoctBT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/productBrandType/child/?parentId=3011",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Pair ProdoctBT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/productBrandType/pair/?pbType=3221&parentId=2",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ProductCategoryType",
+			"description": "",
+			"item": [
+				{
+					"name": "Insert ProductCT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/productCategoryType/insert/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"name\": \"لبنیات\",\n    \"note\": \"Laban\",\n    \"productDetailTypes\": [\n      {\n        \"id\":0,\n        \"productDetailTypeId\":1211,\n        \"mandatory\":false\n      },\n      {\n        \"id\":0,\n        \"productDetailTypeId\":1214,\n        \"mandatory\":true\n      }\n    ]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update ProductCT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/productCategoryType/update/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"id\":1211,\n    \"name\": \"لبنیات\",\n    \"note\": \"Laban\",\n    \"productDetailTypes\": [\n      {\n        \"id\":1,\n        \"productDetailTypeId\":1211,\n        \"mandatory\":true\n      },\n      {\n        \"id\":0,\n        \"productDetailTypeId\":1215,\n        \"mandatory\":false\n      }\n    ]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete ProductCT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/productCategoryType/delete/1214/",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "View ProductCT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/productCategoryType/view/?id=1211",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Search ProductCT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/productCategoryType/search/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Child ProductCT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/productCategoryType/child/?parentId=1211",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Pair ProductCT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/productCategoryType/pair/?parentId=1051",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Hierarchical ProductCT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/productCategoryType/hierarchical/",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ProductDetailType",
+			"description": "",
+			"item": [
+				{
+					"name": "Insert ProductDT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/productDetailType/insert/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"name\": \"آبی\",\n    \"note\": \"Color-Blue\",\n    \"parentId\": 1211\n}\n\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Upsert ProductDT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/productDetailType/upsert/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"id\":1053,\n    \"name\": \"قرمز\",\n    \"note\": \"Color-Red\",\n    \"parentId\": 1051\n}\n\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete ProductDT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/productDetailType/delete/1211/",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "View ProductDT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/productDetailType/view/?id=1211",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Search ProductDT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/productDetailType/search/?parentId=1211",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Child ProductDT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/productDetailType/child/?parentId=1211",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Pair ProductDT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/productDetailType/pair/?parentId=1051",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ProductPriceHistory",
+			"description": "",
+			"item": [
+				{
+					"name": "Search ProductPHis",
+					"request": {
+						"url": "http://localhost:5000/api/v1/productPriceHistory/search/?productId=1&barcode=1234567&priceFrom=12210&priceTo=12300&fromTime=1507925954&toTime=1507925954",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ProductReturnType",
+			"description": "",
+			"item": [
+				{
+					"name": "Insert ProductET",
+					"request": {
+						"url": "http://localhost:5000/api/v1/productReturnType/insert/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"name\": \"تاریخ مصرف گذشته \",\n    \"note\": \"Expired\"\n}\n\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update ProductET",
+					"request": {
+						"url": "http://localhost:5000/api/v1/productReturnType/update/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"id\":1,\n    \"name\": \"تاریخ مصرف گذشته \",\n    \"note\": \"Expired Date\"\n}\n\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete ProductReturnType",
+					"request": {
+						"url": "http://localhost:5000/api/v1/productReturnType/delete/1/",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "View ProductRT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/productReturnType/view/?id=1",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Search ProductRT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/productReturnType/search/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Pair ProductRT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/productReturnType/pair/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Promotion",
+			"description": "",
+			"item": [
+				{
+					"name": "Insert Promotion",
+					"request": {
+						"url": "http://localhost:5000/api/v1/promotion/insert/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\":0,\n  \"fromPrice\":500000,\n  \"toPrice\":1000000,\n  \"toPercent\":90,\n    \"credit\": 100000\n}\n\n"
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Update Promotion",
+					"request": {
+						"url": "http://localhost:5000/api/v1/promotion/update/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\":4,\n  \"fromPrice\":500000,\n  \"toPrice\":1000000,\n  \"toPercent\":90,\n    \"credit\": 100000\n}"
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Promotion",
+					"request": {
+						"url": "http://localhost:5000/api/v1/promotion/delete/1/",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "View Promotion",
+					"request": {
+						"url": "http://localhost:5000/api/v1/promotion/view/?id=1",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Search Promotion",
+					"request": {
+						"url": "http://localhost:5000/api/v1/promotion/search/?fromPrice=1&toPrice=150000",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Pair Promotion",
+					"request": {
+						"url": "http://localhost:5000/api/v1/promotion/block/4/false/",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Message Promotion",
+					"request": {
+						"url": "http://localhost:5000/api/v1/promotion/message/451000/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Role",
+			"description": "",
+			"item": [
+				{
+					"name": "Update Role",
+					"request": {
+						"url": "http://localhost:5000/api/v1/role/update/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 1075,\n  \"name\": \"حسابدار دفتر مرکزی\",\n  \"note\": \"Central Accountant\",\n  \"permissions\": [\n    {\"id\": 2061},\n    {\"id\": 2073}\n  ]\n}\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Ip",
+					"request": {
+						"url": "http://localhost:5000/api/v1/role/ip/update/1075/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"id\": 0,\n    \"ip\": \"10.10.10.253\",\n    \"note\": \"note\"\n  },\n  {\n    \"id\": 5,\n    \"ip\": \"10.10.10.252\",\n    \"note\": \"note\"\n  }\n]"
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Profile Role",
+					"request": {
+						"url": "http://localhost:5000/api/v1/role/profile/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Rider",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "permission",
+									"value": "somthing in json",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "View Role",
+					"request": {
+						"url": "http://localhost:5000/api/v1/role/view/?id=1031",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Rider",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "permission",
+									"value": "somthing in json",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Search Role",
+					"request": {
+						"url": "http://localhost:5000/api/v1/role/search/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Rider",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "permission",
+									"value": "somthing in json",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Pair Role",
+					"request": {
+						"url": "http://localhost:5000/api/v1/role/pair/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Rider",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "permission",
+									"value": "somthing in json",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Store",
+			"description": "",
+			"item": [
+				{
+					"name": "Insert Store",
+					"request": {
+						"url": "http://79.175.163.13:5000/api/v1/store/insert/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "//Content-Type",
+								"value": "application/json",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\":0,\n  \"name\":\"فروشگاه مریم\",\n  \"telephone\": \"02144556677\",\n  \"businessLicense\": \"IDKnow\",\n  \"postalCode\": \"1234567890\",\n  \"activityType\":3101,\n  \"note\": \"این است فروشگاه من!\",\n  \"areaZoneId\": 3013,\n  \"avenueMain\":\"خ اصلی\",\n  \"avenueAuxiliary\":\"خ فرعی\",\n  \"addressRemnant\":\"بقیه آدرس\",\n  \"plaque\":\"12\",\n  \"managerId\":0,\n  \"managerGT\":3021,\n  \"managerNI\":\"1699957495\",\n  \"managerImageP\":\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIABAMAAAAGVsnJAAAAIVBMVEUAAAB+fX1+fX1+fX1+fX1+fX1+fX1+fX1+fX1+fX1+fX1I2PRsAAAACnRSTlMAF/ClME+Kb9vEsIrXWQAACWpJREFUeNrs3T1rVEEUBuBzs1+JlbGImkpREW6lVrqVhBBCKhESIZWCIqTSgEZSKSrCVordVrrxY/P+SouEJG7uzH7k3rBz3vf5CYe9Z87MOTNrIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiMo755fWdty931pfnjU/25EGOI73vby4akWzjPk75+IIlBtlGF4X2OUKw0kXQ/nPzrnEPUTcemWsrOYboef4RZO8wgi9uM0Gri5HsvzKXWh2MqO8yApdzjKz32txZyDGG3jNzZiEHmCPQyjGm3lNzpNHB2PqOSqKsjQns+akHtjGR2+bEKib02VyoYWJ3zYF6BxPrP7T0HSYA2jRQAwDij+DgAyD+CLYBgPgjqOHM7ljKujizfUvYVZTgmyUr66AE/XT3BKsoxSdLVD1HKXqpLoWPUZJblqQGSpPm2cgSSnPTEnSQAYizwBWU6IMl57gGIK0F5lCqr5aaLk4g3BHU8B++TeEuSvbXklJH6dJaCQ/XQN6VsI3S7VlCWqhASmMjSzhCuSE4UQVyVoPHRQBpKbCJSvy2VHRQib4looUjnOvAJVTkuqWhjRMIa6EGBrAdjs6iMu8tBVuozB9LQIYKpVAMNlGhFOZnBxdBuoVwMAWwJYEsR4V6058EmhjAlgROpQC2JLCLAkyn4zkq1bMp10IBpi3xHIoQdUnXULFfNt22UISoFOqgGMvBYB1BHE3SGkJIugMzqNw1m2abCCFpj7QRQnI0jHNgU6yBCIaz8SbCKI4E5hBCshtYxDn4adNrE0Ec6+AWwii2Qx2EMWyHMkT57481EENQCDQRQ1AI1BBDsCGeRZz7MYkLOBc/bFqtIc79wfAmYghKwV1E+e8PthHl/0yoizj3V+hyRLnvEGeIYNgM0Aegjjj33TH6ADQQ5X8/rACgGE0AWhjC+6AUfQCaiPJ/JqYAoJgCwBIA+iSoAKAYTQDoK0EFAMVoAkB/HkAfAEMUwahkB1H+Z2ToGyP0rbEtxBDMydG3x+kHJBYxhPdh4RlE+b81NIc49/Py9IOS9KOy9MPS9OPysVqYoRIeNijofkwwVgpSFILDxsXdD4vr4qSuzlqOIPdzoro+rwcU9ISGHlEJLgMsi0BoGaBZBPSUlh5To39Or4FTqHKgntQsyIJUOTDQHWLoCgVrQaY6MHQ0znEkrsfV9by+/mAh+L4+0ev6+pOVgSTAlwKKrg24vyjwj70zeXUiCMJ4jU4UPAUjbifFfU4qLpiTG6i3EHHBkwvicnI/eFJRwdxcEMlJJwpaf6XPjDGTWXq6J/Owa7763QR5PNvpqq++qu6umpds/4SkyRMA8gKKEiFcEtQHF/XJTX10VZ/dnecByBygT2/r4+v6/H76BF37z8pVTAwiTAeWSgFMETAPg7ghcNYlBeqJFqlBVBU4YyOeF7ZIGHFjxMJyYMJpbozdJJEwwv4AiE5jfwBEYYT9ARCd50Z4TVIJRqgaYMY2boD3JJg+YhWQZj2YE5ZnyEuyh2QTjpaMgGJT4IweL8UhEs8jXoJ9JJLgRvoPY67Nr7QE2CxHDzyKTzaSCeIHC8JazOdwNRO7L3BNPmXyyRsSwYXcWP/9BmbCOsmKCKCXt/HDca0AcJJSPJeSFNZHBeMsnVENBTAoGLuJvdeF/4TPJLss7gEwTV+KMLpf0srZ7LgC8Q1Ks1bKsOjVTA6f03NWgIVawvNU0DOUMZuj2v//NBSijjuRaaxvy8g6/j00DR7G3p6cC/plQjahM7bMfwMiMojpia+aeFhVy4eH2YJdJ7M/V4hHsM5itvVixBXER3M/V8jMbDA2V3MJnYqPYNfA6uf6uAmGdvV8cHFkiH5Hu/nSUohRttbQ1DAugfmfT+eFDI6HIwdPK7j8gXMcuN11cNR++SaJhwZNX8Smyyei1F/6ePtUSWklxC1eZ6xqiwnOXrry7NaxO08vnS2LaeFYSr+gb/I1aofs4L6UjtE2s7VbcwWCR1J6hlWDAHtrrUBwU0zPZMjc/AoEN8V0zdYxN78CwU05p8j6XM3kJDkR9uV0zteyDZMBOdDpy5mgtm19xUfImjMRF+BpUbSNbXlr+esGdyWNz7gMQv16SBZsGYsaoDrPLhyvjIXhY1kjdKGr329egvBxJGyI8rR7y+t4l0oIHo+kjdHWmob9eexJwRoE526N5M3RnuZ6xB+fLvzi4ZUTkcRJ6qXGofe/+7hiBqxYAie+vJI6Sr2VPeAluePVMLTgYWovPoD/+AkEY/YC54rA07OR8k5V9tkTJuSG79cFSblg6Bp7ww9ywts7EmTdrrCRPWInWdE+EeQmhtqZA50zof8XZ4q4bLPDnjEgCzwwAjLIPWHvVQh0u2zQz1typN2z85y9w0INemKFZRB5zYQnTojjQ4xtLITdimKfzoT/RagU8KoOcquIPL87W8ge8HQHGPYAxg4w7QGAHFC1B9pcCFbuAZQdULoHUHZA6R6A2QHmPSDqgXWf6wHPzEAna9D3d5REvMTkoRdk4Qu1syPo4Au12Q218UYRCiHTYTIQGVgqBnGSYHkibOdQgO2oAFASNCdCb9/PSZDxGo/HlWBZRYgWAnJBAC0EZIMAXAjIBQG0EJANAnghIBME8ELAagaB7SyCb5QCqxBY7XLAazdsTkwLAHkBxZ4AiCFeao7j2IGFxiCeDFpFKRSwGLo0p5VnhP7PGaI1LIYdNKfV47E2D5S2fjasiF+UgBoD01EQUAcuaEFEHbioBcHssLwtBlcLZytimL64oUsOMBxmGhcD8wOzviCkEE6JYUQzIGUJ4CaBJA0AJ4F0GsBqCmXbQ6CVwGI10Mr7EuxvVADrimX6Y7hZcJYHAS3xjDWO1hbMNAiBs+A0DyJnwb95ELUW/FsPohqCCS+wZQDzN2wZMBUCuMXwv4IYsS22Ou0xFgitAKyDpkoIWQcxPyBoHcR8EFsHNauENrBAvtIKiJ3hGd+xhWAiBQHnoxYnpWANsT9MsJXwVAvjOoKJK4g5ITenS6DTITMG2KUA8wMCnBNPc10XQBdAY4BmAYD7w8qIu1oLqB8AnQaua2OkQbaxON7TlJY9Lfj/HiFcLywTxg+oYXqiViA+RI3TufeKhbD/84AURVEURVEURVEURVEURVEURVEURVEURVEURVEURVEURVEURVEURfndHhyQAAAAAAj6/7ofoQIAAAAAAAAAAPwEGcG4SMHdcSkAAAAASUVORK5CYII=\",\n  \"managerImageBC\":\"image/139626/3ecdd18e-2e7f-4951-9738-920a5e0bca97_birthCertificate@1.png\",\n  \"managerImageNI\":\"image/139626/3ecdd18e-2e7f-4951-9738-920a5e0bca97_nationalIdentifier@1.png\",\n  \"imageBusinessLicense\":\"image/139626/3ecdd18e-2e7f-4951-9738-920a5e0bca97_businessLicense@1.png\",\n  \n  \"activityTypes\": [\n    {\"id\": 1}\n  ]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Store",
+					"request": {
+						"url": "http://localhost:5000/api/v1/store/update/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "//Content-Type",
+								"value": "application/json",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\":3,\n  \"name\":\"فروشگاه مریم\",\n  \"telephone\": \"02144556677\",\n  \"businessLicense\": \"IDKnow\",\n  \"postalCode\": \"1234567890\",\n  \"note\": \"این است فروشگاه من!\",\n  \"areaZoneId\": 3013,\n  \"avenueMain\":\"خ اصلی\",\n  \"avenueAuxiliary\":\"خ فرعی\",\n  \"addressRemnant\":\"بقیه آدرس\",\n  \"plaque\":\"12\",\n  \"managerId\":2,\n  \n  \"activityTypes\": [\n    {\"id\": 2}\n  ]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Store",
+					"request": {
+						"url": "http://localhost:5000/api/v1/store/delete/1/",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "//Content-Type",
+								"value": "application/json",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Search Store",
+					"request": {
+						"url": "http://79.175.163.13:5000/api/v1/store/search/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "View Store",
+					"request": {
+						"url": "http://localhost:5000/api/v1/store/view/?id=3",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Pair Store",
+					"request": {
+						"url": "http://localhost:5000/api/v1/store/pair/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transaction",
+			"description": "",
+			"item": [
+				{
+					"name": "Search Transaction",
+					"request": {
+						"url": "http://localhost:5000/api/v1/transaction/search/?customerId=1",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vehicle",
+			"description": "",
+			"item": [
+				{
+					"name": "Insert Vehicle",
+					"request": {
+						"url": "http://localhost:5000/api/v1/vehicle/insert/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\":0,\n  \"licensePlateFirst\":12,\n  \"licensePlateLetter\":\"B\",\n  \"licensePlateSecond\":345,\n    \"licensePlateCode\": 66,\n    \"colorTypeId\":2,\n    \"manufactureYear\":1392,\n    \"vehicleBrandTypeId\":1,\n    \"distributorId\":13\n}\n\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Vehicle",
+					"request": {
+						"url": "http://localhost:5000/api/v1/vehicle/update/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\":1,\n  \"licensePlateFirst\":12,\n  \"licensePlateLetter\":\"A\",\n  \"licensePlateSecond\":345,\n    \"licensePlateCode\": 22,\n    \"colorTypeId\":2,\n    \"manufactureYear\":1392,\n    \"vehicleBrandTypeId\":1,\n    \"distributorId\":13\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Vehicle",
+					"request": {
+						"url": "http://localhost:5000/api/v1/vehicle/delete/1/",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "View Vehicle",
+					"request": {
+						"url": "http://localhost:5000/api/v1/vehicle/view/?id=1",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Search Vehicle",
+					"request": {
+						"url": "http://79.175.163.13:5000/api/v1/vehicle/search/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Pair Vehicle",
+					"request": {
+						"url": "http://localhost:5000/api/v1/vehicle/pair/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "VehicleBrandT",
+			"description": "",
+			"item": [
+				{
+					"name": "Insert VehicleBT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/vehicleBrandType/insert/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"name\": \"نیسان زامیاد\",\n    \"note\": \"Nissan-Zamyad\",\n    \"capacity\": 3000\n}\n\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update VehicleBT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/vehicleBrandType/update/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"id\": 1,\n    \"name\": \"نیسان زامیاد\",\n    \"note\": \"Nissan-Zamyad\",\n    \"capacity\": 3500\n}\n\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete VehicleBT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/vehicleBrandType/delete/1/",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "View VehicleBT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/vehicleBrandType/view/?id=1",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Search VehicleBT",
+					"request": {
+						"url": "http://79.175.163.13:5000/api/v1/vehicleBrandType/search/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Pair VehicleBT",
+					"request": {
+						"url": "http://localhost:5000/api/v1/vehicleBrandType/pair/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "تاکسی تلفنی",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

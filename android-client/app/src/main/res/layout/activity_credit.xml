@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ir.joorjens.joorapp.activities.CreditActivity">
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@drawable/black60_border"
+        android:layout_marginTop="5dp">
+
+        <LinearLayout
+            android:id="@+id/ll_credit"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ir.joorjens.joorapp.customViews.TextViewPlus
+                android:id="@+id/tv_credit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                style="@style/TextStyle"
+                android:text="میزان اعتبار"
+                android:textSize="35sp"
+                android:textColor="@color/color_first"
+                android:gravity="center"/>
+            <ir.joorjens.joorapp.customViews.ImageViewPlus
+                android:layout_marginLeft="5dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:iv_square="true"
+                app:iv_image_source="@drawable/v_credit"/>
+        </LinearLayout>
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:layout_marginTop="7dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_menu_credit"
+            style="@style/TextStyle"
+            android:layout_below="@+id/ll_credit"/>
+        
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ir.joorjens.joorapp.customViews.ButtonPlus
+            android:id="@+id/btn_credit_2ht"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            style="@style/ButtonOrdersNormalStyle"
+            android:gravity="center"
+            android:text="200"
+            android:layout_marginBottom="10dp"/>
+
+        <ir.joorjens.joorapp.customViews.ButtonPlus
+            android:id="@+id/btn_credit_5ht"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            style="@style/ButtonOrdersNormalStyle"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:text="500"/>
+
+        <ir.joorjens.joorapp.customViews.ButtonPlus
+            android:id="@+id/btn_credit_1m"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            style="@style/ButtonOrdersNormalStyle"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:text="1000"/>
+
+        <ir.joorjens.joorapp.customViews.ButtonPlus
+            android:id="@+id/btn_credit_desired"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            style="@style/ButtonOrdersNormalStyle"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:text="@string/lbl_credit_desired"/>
+
+    </LinearLayout>
+
+    <ir.joorjens.joorapp.customViews.ButtonPlus
+        android:layout_marginTop="15dp"
+        android:id="@+id/btn_credit_increase"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        style="@style/ButtonFirstStyle"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:text="@string/lbl_credit_increase"/>
+
+    </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

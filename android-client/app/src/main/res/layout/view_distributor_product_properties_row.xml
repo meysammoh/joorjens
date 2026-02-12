@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dppr_main_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="right"
+    android:weightSum="4"
+    android:orientation="horizontal">
+
+    <ir.joorjens.joorapp.customViews.TextViewPlus
+        android:id="@+id/dppr_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        style="@style/TextStyle"
+        android:textSize="16sp"
+        android:text="قیمت تکی"
+        android:layout_gravity="left"/>
+
+    <ir.joorjens.joorapp.customViews.TextViewPlus
+        android:textSize="16sp"
+        android:id="@+id/dppr_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:text="نوع بسته بندی"
+        style="@style/TextStyle"
+        android:layout_gravity="right"/>
+
+
+</LinearLayout>

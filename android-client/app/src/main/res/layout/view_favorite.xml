@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+<LinearLayout
+    android:id="@+id/rl_favorite_item__main_border"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:background="@color/background"
+    android:layout_height="wrap_content"
+    android:weightSum="2">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="5dp"
+        android:weightSum="3"
+        android:layout_weight="1">
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:id="@+id/tv_favorite_item_text1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            style="@style/TextStyle"
+            android:text="نام برند"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/img_tmbi_thumbnail"/>
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:id="@+id/tv_favorite_item_amount"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            style="@style/TextStyle"
+            android:text="Amount"
+            android:layout_below="@+id/tv_tmbi_text1"
+            android:layout_toLeftOf="@+id/img_tmbi_thumbnail"/>
+
+        <ir.joorjens.joorapp.customViews.ButtonPlus
+            android:id="@+id/btn_favorite_item_order_again"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            style="@style/ButtonFirstStyle"
+            android:text="@string/label_order_again"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        android:gravity="right">
+
+        <ir.joorjens.joorapp.customViews.ImageViewPlus
+            app:iv_text_size="17"
+            app:iv_percent=".32"
+            app:iv_square="true"
+            android:id="@+id/img_favorite_item_image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentRight="true"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+    <ir.joorjens.joorapp.customViews.ASLinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:background="@color/product_prop_bc"
+        android:layout_height="20dp"
+        app:ll_h_percent=".031"/>
+
+</LinearLayout>

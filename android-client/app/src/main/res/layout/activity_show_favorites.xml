@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:id="@+id/order_summary_row_title_section">
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:id="@+id/tv_order_summary_row_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextStyle"
+            android:textColor="@color/color_second"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:text="@string/label_past_orders_favorite"/>
+        <View
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000000"/>
+    </LinearLayout>
+
+    <ir.joorjens.joorapp.customViews.TitleBar2
+        android:id="@+id/tb2_dist_list_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/cheap_color"
+        app:title2_text="@string/label_distributors"
+        app:tile2_image="@drawable/hp_order_logo_unsel"
+        android:visibility="gone">
+
+    </ir.joorjens.joorapp.customViews.TitleBar2>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="0dp"
+        android:weightSum="10">
+        <ir.joorjens.joorapp.customViews.ButtonPlus
+            android:id="@+id/fav_btn_tab_count"
+            style="@style/ButtonWhiteStyle"
+            android:textSize="20sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:background="@null"
+            android:text="@string/label_based_on_count" />
+        <ir.joorjens.joorapp.customViews.ButtonPlus
+            android:textSize="20sp"
+            android:id="@+id/fav_btn_tab_cost"
+            style="@style/ButtonWhiteStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:background="@null"
+            android:text="@string/label_based_on_cost" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/unselected_tab_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="0dp"
+        android:weightSum="10">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="4.8"
+            android:layout_height="4dp"
+            android:background="@drawable/unselected_tab_bg"
+            android:id="@+id/fav_ll_tab_count" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".2"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="4.8"
+            android:layout_height="4dp"
+            android:background="@drawable/selected_tab_bg"
+            android:id="@+id/fav_ll_tab_cost" />
+    </LinearLayout>
+
+<ir.joorjens.joorapp.customViews.TextViewPlus
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="موردی یافت نشد."
+    android:visibility="gone"
+    android:id="@+id/tv_shown_favorite_result_message"
+    style="@style/TextStyle"/>
+    <LinearLayout
+        android:id="@+id/favorites_ll_items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:scrollbars="none">
+
+    </LinearLayout>
+
+</LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

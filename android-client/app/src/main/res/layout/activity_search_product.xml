@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/background"
+    android:layout_height="wrap_content"
+    android:scrollbars="none">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <LinearLayout
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/spa_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ir.joorjens.joorapp.customViews.TextViewPlus
+                android:text="@string/spa_product_name"
+                style="@style/TextStyle"/>
+            <ir.joorjens.joorapp.customViews.EditTextPlus
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:id="@+id/et_spa_product_name"
+                android:layout_marginBottom="10dp"
+                style="@style/EditTextStyle" />
+
+            <ir.joorjens.joorapp.customViews.TextViewPlus
+                android:text="@string/spa_product_category"
+                style="@style/TextStyle"/>
+            <ir.joorjens.joorapp.customViews.SpinnerPlus
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:id="@+id/sp_spa_product_category"
+                android:layout_marginBottom="10dp"
+                style="@style/SpinnerVioletStyle" />
+
+            <ir.joorjens.joorapp.customViews.TextViewPlus
+                android:text="@string/spa_barcode"
+                style="@style/TextStyle"/>
+            <ir.joorjens.joorapp.customViews.EditTextPlus
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:id="@+id/et_spa_product_category"
+                android:layout_marginBottom="30dp"
+                style="@style/EditTextStyle" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="30dp"
+            android:id="@+id/spa_adv_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ir.joorjens.joorapp.customViews.EditTextPlus
+                    style="@style/EditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:id="@+id/edit_txt_adv_search_name"/>
+                <ir.joorjens.joorapp.customViews.TextViewPlus
+                    android:textColor="@color/color_first"
+                    android:layout_marginLeft="10dp"
+                    style="@style/TextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_advanced_search"/>
+            </LinearLayout>
+
+            <ir.joorjens.joorapp.customViews.TextViewPlus
+                android:layout_marginTop="30dp"
+                style="@style/TextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_in_special_pages"/>
+            <RadioGroup
+                android:id="@+id/radio_group_adv_search_special_filter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:orientation="vertical">
+                <ir.joorjens.joorapp.customViews.RadioButtonPlus
+                    android:text="@string/label_discount_package"
+                    android:id="@+id/radio_adv_search_discount_group"
+                    style="@style/RadioButtonStyle"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+                <ir.joorjens.joorapp.customViews.RadioButtonPlus
+                    android:text="@string/action_cheapest"
+                    android:id="@+id/radio_adv_search_cheapest_group"
+                    style="@style/RadioButtonStyle"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+                <ir.joorjens.joorapp.customViews.RadioButtonPlus
+                    android:text="@string/label_most_recent"
+                    android:id="@+id/radio_adv_search_newest_group"
+                    style="@style/RadioButtonStyle"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+                <ir.joorjens.joorapp.customViews.RadioButtonPlus
+                    android:text="@string/action_top_selling"
+                    android:id="@+id/radio_adv_search_top_selling_group"
+                    style="@style/RadioButtonStyle"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </RadioGroup>
+            <LinearLayout
+                android:id="@+id/container_adv_search_category_filter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ir.joorjens.joorapp.customViews.TextViewPlus
+                    android:layout_marginTop="30dp"
+                    style="@style/TextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_based_on_category"/>
+                <LinearLayout
+                    android:layout_marginRight="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/container_adv_search_categories">
+
+                </LinearLayout>
+                </LinearLayout>
+            <LinearLayout
+                android:id="@+id/container_adv_search_price_filter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <ir.joorjens.joorapp.customViews.TextViewPlus
+                style="@style/TextStyle"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_based_on_price"/>
+            <RadioGroup
+                android:layout_marginRight="15dp"
+                android:id="@+id/radio_group_adv_search_price_filter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ir.joorjens.joorapp.customViews.RadioButtonPlus
+                    android:id="@+id/radio_adv_search_price_asc"
+                    style="@style/RadioButtonStyle"
+                    android:text="@string/label_cheap_to_expensive"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+                <ir.joorjens.joorapp.customViews.RadioButtonPlus
+                    android:id="@+id/radio_adv_search_price_dsc"
+                    style="@style/RadioButtonStyle"
+                    android:text="@string/label_expensive_to_cheap"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/container_adv_search_sell_filter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <ir.joorjens.joorapp.customViews.TextViewPlus
+                style="@style/TextStyle"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_based_on_sell"/>
+            <RadioGroup
+                android:layout_marginRight="15dp"
+                android:id="@+id/radio_group_adv_search_sell_filter"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ir.joorjens.joorapp.customViews.RadioButtonPlus
+                        android:id="@+id/radio_adv_search_sell_asc"
+                        style="@style/RadioButtonStyle"
+                        android:text="@string/label_less_to_more"
+                        android:textSize="20sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <ir.joorjens.joorapp.customViews.RadioButtonPlus
+                        android:id="@+id/radio_adv_search_sell_dsc"
+                        style="@style/RadioButtonStyle"
+                        android:text="@string/label_more_to_less"
+                        android:textSize="20sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </RadioGroup>
+                </LinearLayout>
+            <LinearLayout
+                android:id="@+id/container_adv_search_brand_filter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ir.joorjens.joorapp.customViews.TextViewPlus
+                    android:layout_marginTop="30dp"
+                    style="@style/TextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_based_on_brand"/>
+                <LinearLayout
+                    android:layout_marginRight="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/container_adv_search_brands"
+                    >
+
+                </LinearLayout>
+            </LinearLayout>
+            <ir.joorjens.joorapp.customViews.TextViewPlus
+                style="@style/TextStyle"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_based_on_distributor"/>
+            <LinearLayout
+                android:layout_marginRight="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/container_adv_search_distributors"
+                >
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ir.joorjens.joorapp.customViews.ButtonPlus
+                android:layout_marginBottom="20dp"
+                android:id="@+id/btn_spa_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/ButtonFirstStyle"
+                android:text="جستجو کن" />
+
+            <ir.joorjens.joorapp.customViews.ButtonPlus
+                android:layout_marginBottom="30dp"
+                android:id="@+id/btn_spa_adv_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/ButtonGrayStyle"
+                android:text="جستجوی پیشرفته"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

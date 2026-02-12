@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:padding="10dp"
+        android:id="@+id/fsto_ll_body"
+
+        android:layout_width="match_parent"
+        android:gravity="right"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        android:orientation="vertical">
+
+        <ir.joorjens.joorapp.customViews.ImageViewPlus
+            android:id="@+id/dist_rate_img_close"
+            android:layout_marginBottom="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:iv_square="true"
+            app:iv_image_source="@drawable/v_delete_order"/>
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:textSize="18sp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/dist_rate_tv_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextStyleRegular"
+            android:textColor="#000000"/>
+
+        <ir.joorjens.joorapp.customViews.KandouBar
+            android:layout_marginBottom="20dp"
+            android:id="@+id/dist_rate_kando"
+            android:layout_gravity="center"
+            style="@style/KanduBarLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp" />
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextStyleRegular"
+            android:textColor="@color/color_first"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:text="@string/lbl_dist_rate_comment_title"/>
+
+        <GridView
+            android:scrollbars="none"
+            android:id="@+id/grid_dist_discontents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:stretchMode="spacingWidthUniform"
+            android:columnWidth="100dp"
+            android:numColumns="2"/>
+
+        <ir.joorjens.joorapp.customViews.EditTextPlus
+            android:layout_marginBottom="20dp"
+            android:id="@+id/dist_rate_cmt_other"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            style="@style/EditTextStyle"
+            android:hint="@string/lbl_dist_rate_comment_other"/>
+
+        <ir.joorjens.joorapp.customViews.ButtonPlus
+            android:id="@+id/dist_rate_btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ButtonGreenBGWhiteTextStyle"
+            android:text="@string/btn_dist_rate_submit"/>
+
+    </LinearLayout>
+

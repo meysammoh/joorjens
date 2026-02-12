@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@color/color_first"
+        android:id="@+id/del_order_list_top_border">
+
+        <RelativeLayout
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:orientation="horizontal">
+
+            <ir.joorjens.joorapp.customViews.TextViewPlus
+                android:layout_toLeftOf="@+id/del_order_list_title_bar_img"
+                android:id="@+id/del_order_list_title_bar_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="#FFF"
+                style="@style/TextStyle"
+                android:layout_marginBottom="0dp"
+                android:text="@string/orders_list" />
+            <ir.joorjens.joorapp.customViews.ImageViewPlus
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                app:iv_square="true"
+                android:id="@+id/del_order_list_title_bar_img"
+                android:layout_marginLeft="5dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="fitCenter"
+                app:iv_image_source="@drawable/v_order_list"
+                android:layout_gravity="center"/>
+
+            <ir.joorjens.joorapp.customViews.TextViewPlus
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/del_order_list_title_bar_tv_serial"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#FFF"
+                style="@style/TextStyle"
+                android:layout_marginBottom="0dp"
+                android:text="@string/orders_list" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:fillViewport="true"
+        android:id="@+id/del_order_scroll"
+        android:layout_below="@+id/del_order_list_top_border"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/del_order_store_info"
+                android:orientation="vertical">
+
+                <ir.joorjens.joorapp.customViews.TextViewPlus
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/del_store_address_title"
+                    android:layout_alignParentRight="true"
+                    style="@style/TextStyleRegular"
+                    android:visibility="visible"
+                    android:textColor="@color/full_sale_color"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textSize="16sp"
+                    android:text="آدرس: "/>
+                <ir.joorjens.joorapp.customViews.TextViewPlus
+                    android:layout_marginLeft="5dp"
+                    android:layout_toLeftOf="@+id/del_store_address_title"
+                    android:id="@+id/del_store_address_value"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="آردس"
+                    android:textSize="16sp"
+                    android:textColor="@color/color_black60"
+                    style="@style/TextStyle"/>
+
+                <ir.joorjens.joorapp.customViews.TextViewPlus
+                    android:layout_marginRight="5dp"
+                    android:layout_below="@+id/del_store_address_title"
+                    android:id="@+id/del_store_admin_title"
+                    android:layout_alignParentRight="true"
+                    style="@style/TextStyleRegular"
+                    android:visibility="visible"
+                    android:textColor="@color/full_sale_color"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textSize="16sp"
+                    android:text="مسئول: "/>
+                <ir.joorjens.joorapp.customViews.TextViewPlus
+                    android:layout_marginLeft="5dp"
+                    android:layout_toLeftOf="@+id/del_store_admin_title"
+                    android:layout_below="@+id/del_store_address_value"
+                    android:id="@+id/del_store_admin_value"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="مسئول"
+                    android:textSize="16sp"
+                    android:textColor="@color/color_black60"
+                    style="@style/TextStyle"/>
+
+                <ir.joorjens.joorapp.customViews.TextViewPlus
+                    android:layout_marginRight="5dp"
+                    android:layout_below="@+id/del_store_admin_title"
+                    android:id="@+id/del_store_phone_title"
+                    android:layout_alignParentRight="true"
+                    style="@style/TextStyleRegular"
+                    android:visibility="visible"
+                    android:textColor="@color/full_sale_color"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textSize="16sp"
+                    android:text="تلفن: "/>
+                <ir.joorjens.joorapp.customViews.TextViewPlus
+                    android:layout_marginLeft="5dp"
+                    android:layout_toLeftOf="@+id/del_store_phone_title"
+                    android:layout_below="@+id/del_store_admin_value"
+                    android:id="@+id/del_store_phone_value"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="مسئول"
+                    android:textSize="16sp"
+                    android:textColor="@color/color_black60"
+                    style="@style/TextStyle"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/order_list_separator"
+                    android:layout_below="@+id/del_store_phone_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:background="@color/product_prop_bc"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/del_order_products_container"
+                android:orientation="vertical"/>
+
+            <LinearLayout
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/del_order_ll_summary_del">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:weightSum="2">
+
+                    <ir.joorjens.joorapp.customViews.TextViewPlus
+                        android:gravity="right"
+                        android:textColor="@color/full_sale_color"
+                        android:id="@+id/del_sum_order_price"
+                        style="@style/TextStyleRegular"
+                        android:textSize="17sp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0"/>
+                    <ir.joorjens.joorapp.customViews.TextViewPlus
+                        style="@style/TextStyleRegular"
+                        android:visibility="visible"
+                        android:textColor="@color/full_sale_color"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textSize="16sp"
+                        android:text="مبلغ قابل پرداخت:"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:weightSum="2">
+
+                    <ir.joorjens.joorapp.customViews.TextViewPlus
+                        android:gravity="right"
+                        android:textColor="@color/full_sale_color"
+                        android:id="@+id/del_sum_order_cash"
+                        style="@style/TextStyleRegular"
+                        android:textSize="17sp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0"/>
+                    <ir.joorjens.joorapp.customViews.TextViewPlus
+                        style="@style/TextStyleRegular"
+                        android:visibility="visible"
+                        android:textColor="@color/full_sale_color"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textSize="16sp"
+                        android:text="پرداخت نقدی:"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:weightSum="2">
+
+                    <ir.joorjens.joorapp.customViews.TextViewPlus
+                        android:gravity="right"
+                        android:textColor="@color/full_sale_color"
+                        android:id="@+id/del_sum_order_check"
+                        style="@style/TextStyleRegular"
+                        android:textSize="17sp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0"/>
+                    <ir.joorjens.joorapp.customViews.TextViewPlus
+                        style="@style/TextStyleRegular"
+                        android:visibility="visible"
+                        android:textColor="@color/full_sale_color"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textSize="16sp"
+                        android:text="پرداخت چکی: "/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <ir.joorjens.joorapp.customViews.ButtonPlus
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        style="@style/ButtonFirstStyle"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/del_sum_order_confirm_btn"
+                        android:text="در حال تحویل" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

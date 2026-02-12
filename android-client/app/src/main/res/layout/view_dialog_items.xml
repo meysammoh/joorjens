@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:gravity="right|center_vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <ir.joorjens.joorapp.customViews.TextViewPlus
+        android:id="@+id/dialog_item_title"
+        android:layout_width="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_height="40dp"
+        style="@style/TextStyleRegular"
+        android:textColor="@color/discount_color"
+        android:textSize="16sp"
+        android:text="منو"/>
+
+    <ir.joorjens.joorapp.customViews.ImageViewPlus
+        android:id="@+id/dialog_item_icon"
+        android:layout_marginLeft="3dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:iv_square="true"
+        app:iv_image_source="@drawable/v_camera"/>
+
+</LinearLayout>

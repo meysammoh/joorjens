@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ProgressWheel="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ir.joorjens.joorapp.customViews.TextViewPlus
+        android:gravity="center_vertical"
+        android:id="@+id/progress_text_view"
+        style="@style/TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="35dp"
+        android:layout_marginRight="5dp"
+        android:text="@string/button_resend_activation"
+        android:textSize="16sp" />
+
+    <ir.joorjens.joorapp.customViews.ProgressWheel
+        android:id="@+id/progressBarTwo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="5dp"
+        ProgressWheel:pwBarColor="@color/color_second"
+        ProgressWheel:pwBarLength="40dp"
+        ProgressWheel:pwBarWidth="1dp"
+        ProgressWheel:pwCircleColor="#FFFFFF"
+        ProgressWheel:pwContourColor="@color/color_black50"
+        ProgressWheel:pwRimColor="#FFFFFF"
+        ProgressWheel:pwRimWidth="1dp"
+        ProgressWheel:pwSpinSpeed="3dp"
+        ProgressWheel:pwTextColor="@color/color_second"
+        ProgressWheel:pwTextSize="14sp"/>
+
+    </LinearLayout>

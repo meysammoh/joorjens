@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000"
+        android:layout_margin="5dp"/>
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/ll_ordersexpandedList_sum_container"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+        <ir.joorjens.joorapp.customViews.ButtonPlus
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            style="@style/ButtonGreenBGWhiteTextStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="30dp"
+            android:id="@+id/btn_ordersexpandedList_sum_less_detail"
+            android:text="@string/label_less_details" />
+        <LinearLayout
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ir.joorjens.joorapp.customViews.TextViewPlus
+                android:id="@+id/tv_ordersexpandedList_sum_price"
+                style="@style/TextStyleRegular"
+                android:textSize="16sp"
+                android:textColor="@color/full_sale_color"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="قیمت"/>
+
+            <ir.joorjens.joorapp.customViews.TextViewPlus
+                android:visibility="visible"
+                android:id="@+id/tv__ordersexpandedList_sum_profit"
+                android:textSize="16sp"
+                style="@style/TextStyleRegular"
+                android:textColor="@color/full_sale_color"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="سود"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/list_group_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="15dp"
+        android:background="@color/product_prop_bc"/>
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/cpba_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ir.joorjens.joorapp.activities.ControlPanelBaseActivity">
+
+    <ir.joorjens.joorapp.customViews.TextViewPlus
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        style="@style/TextStyle"
+        android:textColor="@color/color_first"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:text="پنل کاربری"
+        android:id="@+id/action_bar_activity_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#000">
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:id="@+id/cpba_content_frame"
+        >
+
+    </FrameLayout>
+
+</LinearLayout>

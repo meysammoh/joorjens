@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dppr_main_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:id="@+id/order_title_section"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true">
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/del_order_tv_row_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextStyleRegular"
+            android:textColor="@color/color_first"
+            android:textSize="18sp"
+            android:text="#"/>
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:layout_centerVertical="true"
+            android:textSize="18sp"
+            android:textColor="@color/color_first"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/del_order_tv_row_number"
+            android:id="@+id/del_order_tv_product_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextStyleRegular"
+            android:text="title"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="5dp"
+        android:background="@color/color_black60"/>
+
+    <LinearLayout
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <ir.joorjens.joorapp.customViews.TextViewPlus
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical"
+                android:text="قیمت"
+                android:textSize="16sp"
+                android:textColor="@color/color_black60"
+                style="@style/TextStyleRegular"
+                android:id="@+id/del_order_tv_count"/>
+
+            <ir.joorjens.joorapp.customViews.TextViewPlus
+                android:layout_marginBottom="5dp"
+                android:textSize="16sp"
+                style="@style/TextStyle"
+                android:layout_weight="2"
+                android:gravity="right|center_vertical"
+                android:textColor="@color/color_first"
+                android:layout_marginLeft="2dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="تعداد سفارش"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <ir.joorjens.joorapp.customViews.TextViewPlus
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical"
+                android:text="قیمت"
+                android:textSize="16sp"
+                android:textColor="@color/color_black60"
+                style="@style/TextStyleRegular"
+                android:id="@+id/del_order_tv_price_one"/>
+
+            <ir.joorjens.joorapp.customViews.TextViewPlus
+                android:layout_marginBottom="5dp"
+                android:textSize="16sp"
+                style="@style/TextStyle"
+                android:layout_weight="2"
+                android:gravity="right|center_vertical"
+                android:textColor="@color/color_first"
+                android:layout_marginLeft="2dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/label_order_price_one"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="3">
+            <ir.joorjens.joorapp.customViews.TextViewPlus
+                android:layout_marginBottom="5dp"
+                android:id="@+id/del_order_tv_price_total"
+                android:layout_width="0dp"
+                android:gravity="right|center_vertical"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="@color/color_first"
+                android:textSize="16sp"
+                style="@style/TextStyleRegular"
+                android:text="0 تومان"/>
+            <ir.joorjens.joorapp.customViews.TextViewPlus
+                android:layout_marginBottom="5dp"
+                android:textSize="16sp"
+                style="@style/TextStyleRegular"
+                android:layout_weight="2"
+                android:gravity="right|center_vertical"
+                android:textColor="@color/color_first"
+                android:layout_marginLeft="2dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/label_order_sum"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/order_list_separator"
+        android:layout_below="@+id/order_tv_price"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="@color/product_prop_bc"/>
+
+</LinearLayout>

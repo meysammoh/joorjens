@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+<RelativeLayout
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:id="@+id/dppr_main_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:id="@+id/dppr_title_section_container"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <View
+            android:layout_width="2dp"
+            android:id="@+id/dppr_title_center"
+            android:layout_centerInParent="true"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/dppr_title_center"
+            android:layout_toLeftOf="@+id/dppr_title_center">
+
+            <ir.joorjens.joorapp.customViews.KandouBar
+                android:layout_gravity="start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="40dp"
+                android:maxHeight="40dp"
+                android:id="@+id/dppr_rb_distributor_rate"
+                android:numStars="5"
+                style="@style/KanduBarSmall"
+                android:stepSize="1"
+                android:isIndicator="true"
+                android:rating="2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_toRightOf="@+id/dppr_title_center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="2"
+            android:id="@+id/dppr_title_section">
+            <ir.joorjens.joorapp.customViews.TextViewPlus
+                android:id="@+id/dppr_tv_offers_check"
+                style="@style/RoundCornerTagThirdColor"
+                android:layout_height="wrap_content"
+                android:text="@string/label_check"
+                android:layout_marginRight="5dp"/>
+            <ir.joorjens.joorapp.customViews.TextViewPlus
+                android:id="@+id/dppr_tv_offers_cash"
+                style="@style/RoundCornerTagFourthColor"
+                android:layout_marginRight="5dp"
+                android:text="@string/label_chash"/>
+            <ir.joorjens.joorapp.customViews.TextViewPlus
+                android:id="@+id/dppr_tv_distributor_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextStyleBold"
+                android:textColor="@color/discount_color"
+                android:text="distributor name"
+                />
+        </LinearLayout>
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:id="@+id/dppr_tv_price_one"
+            android:layout_toRightOf="@+id/dppr_title_center"
+            android:layout_below="@+id/dppr_title_section"
+            style="@style/TextStyleRegular"
+            android:gravity="right"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/red1"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="هر عدد "/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dppr_body_section"
+        android:orientation="horizontal"
+        android:layout_below="@+id/dppr_title_section_container"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <View
+            android:layout_width="3dp"
+            android:id="@+id/rl_dppr_center"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/rl_dppr_center">
+
+            <ir.joorjens.joorapp.customViews.ASLinearLayout
+                app:ll_h_percent="0.097"
+                app:ll_w_percent=".137"
+                android:orientation="vertical"
+                android:layout_width="450dp"
+                android:layout_height="300dp"
+                android:gravity="left|top"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/dppr_tv_delivery_time_container"
+                android:background="@drawable/ic_deliver_bg">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ir.joorjens.joorapp.customViews.TextViewPlus
+                        android:layout_marginTop="2dp"
+                        android:layout_marginLeft="3dp"
+                        android:id="@+id/dppr_tv_delivery_time"
+                        android:layout_height="wrap_content"
+                        android:layout_width="25dp"
+                        style="@style/TextStyleRegular"
+                        android:text="0"
+                        android:gravity="center"
+                        android:textColor="@color/full_sale_color"
+                        android:includeFontPadding="false"
+                        android:padding="0dp"
+                        android:textSize="12sp"/>
+                    <ir.joorjens.joorapp.customViews.TextViewPlus
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="-9dp"
+                        android:layout_width="25dp"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        style="@style/TextStyleRegular"
+                        android:text="ساعت"
+                        android:textAlignment="center"
+                        android:textColor="@color/full_sale_color"
+                        android:includeFontPadding="false"
+                        android:padding="0dp"
+                        android:textSize="10sp"/>
+                </LinearLayout>
+
+
+            </ir.joorjens.joorapp.customViews.ASLinearLayout>
+
+
+            <ir.joorjens.joorapp.customViews.TextViewPlus
+                android:textColor="@color/full_sale_color"
+                android:id="@+id/dppr_tv_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="message"
+                style="@style/TextStyleRegular"
+                android:textSize="16sp"
+                android:layout_alignBottom="@id/dppr_tv_delivery_time_container"
+                android:layout_alignParentRight="true"
+                android:gravity="right"
+                android:textAlignment="gravity"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/product_prop_bc"
+                android:orientation="vertical"
+                android:layout_below="@+id/dppr_tv_delivery_time_container"
+                android:layout_marginBottom="5dp">
+
+                <ir.joorjens.joorapp.customViews.TextViewPlus
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TextStyleRegular"
+                    android:textSize="16sp"
+                    android:text="تخفیفات لحاظ شده:"
+                    android:layout_below="@+id/dppr_tv_message"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:layout_marginTop="3dp"/>
+
+                <ir.joorjens.joorapp.customViews.TextViewPlus
+                    android:id="@+id/dppr_tv_computations_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TextStyleRegular"
+                    android:textSize="16sp"
+                    android:text=""
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/dppr_packs_container"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/rl_dppr_center"
+            android:orientation="vertical" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:id="@+id/dppr_btn_add_card"
+        android:text=""
+        android:gravity="center"
+        android:background="@color/cheap_color"
+        android:layout_below="@id/dppr_body_section"
+        android:weightSum="7">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="3.4">
+
+            <ir.joorjens.joorapp.customViews.TextViewPlus
+                android:id="@+id/dppr_btn_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextStyleRegular"
+                android:textSize="16sp"
+                android:textColor="#FFF"
+                android:layout_marginBottom="0dp"
+                android:text="انتخاب"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:background="#FFF"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="3.4">
+
+            <ir.joorjens.joorapp.customViews.TextViewPlus
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextStyleRegular"
+                android:textSize="16sp"
+                android:textColor="#FFF"
+                android:layout_marginBottom="0dp"
+                android:text="انتخاب"/>
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_marginLeft="4dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/v_add_to_card"/>
+
+        </LinearLayout>
+        
+    </LinearLayout>
+</RelativeLayout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="@color/product_prop_bc">
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dppr_main_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:id="@+id/order_summary_row_title_section">
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:id="@+id/tv_order_summary_row_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextStyleRegular"
+            android:textColor="@color/color_first"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:text="عنوان"/>
+        <View
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000000"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/order_summary_row_details_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:weightSum="3">
+                <ir.joorjens.joorapp.customViews.TextViewPlus
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="تعداد"
+                    style="@style/TextStyleRegular"
+                    android:textSize="16sp"
+                    android:id="@+id/tv_order_summary_row_counts"/>
+                <ir.joorjens.joorapp.customViews.TextViewPlus
+                    android:layout_width="0dp"
+                    style="@style/TextStyleRegular"
+                    android:textSize="16sp"
+                    android:textColor="@color/color_first"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_count_of_orders"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+                <ir.joorjens.joorapp.customViews.TextViewPlus
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="مقدار هزینه"
+                    style="@style/TextStyleRegular"
+                    android:textSize="16sp"
+                    android:id="@+id/tv_order_summary_row_cost"/>
+                <ir.joorjens.joorapp.customViews.TextViewPlus
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    style="@style/TextStyleRegular"
+                    android:textSize="16sp"
+                    android:textColor="@color/color_first"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_cost_of_orders"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+                <ir.joorjens.joorapp.customViews.TextViewPlus
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    style="@style/TextStyleRegular"
+                    android:textSize="16sp"
+                    android:layout_height="wrap_content"
+                    android:text="مقدار سود"
+                    android:id="@+id/tv_order_summary_row_profit"/>
+                <ir.joorjens.joorapp.customViews.TextViewPlus
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    style="@style/TextStyleRegular"
+                    android:textSize="16sp"
+                    android:textColor="@color/color_first"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_profit_of_orders"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    <include layout="@layout/gray_horizontal_divider"/>
+
+</LinearLayout>

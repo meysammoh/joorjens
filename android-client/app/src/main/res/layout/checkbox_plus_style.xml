@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ir.joorjens.joorapp.customViews.CheckBoxPlus style="@style/CheckBoxStyle"
+    android:layout_marginBottom="8dp"
+    android:layout_marginTop="8dp"
+    android:textSize="18sp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+</ir.joorjens.joorapp.customViews.CheckBoxPlus>

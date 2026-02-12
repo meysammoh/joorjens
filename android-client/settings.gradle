@@ -1,0 +1,1 @@
+include ':app', ':zxing', ':discrete-scrollview-1.4.7'

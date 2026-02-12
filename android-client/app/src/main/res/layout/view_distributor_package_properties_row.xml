@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dppr_main_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:weightSum="6">
+
+    <ir.joorjens.joorapp.customViews.TextViewPlus
+        android:id="@+id/dpkpr_tv_price_without_discount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        style="@style/TextStyle"
+        android:text="قیمت"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:textAlignment="center"/>
+
+    <ir.joorjens.joorapp.customViews.TextViewPlus
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:id="@+id/dpkpr_tv_count"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        style="@style/TextStyle"
+        android:textSize="16sp"
+        android:text="تعداد"
+        android:gravity="center"
+        android:textAlignment="center"/>
+
+    <ir.joorjens.joorapp.customViews.TextViewPlus
+        android:id="@+id/dpkpr_tv_item_inside"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:textSize="16sp"
+        android:gravity="right"
+        android:text="محتویات"
+        style="@style/TextStyle"/>
+
+
+</LinearLayout>

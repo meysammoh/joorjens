@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    tools:context="ir.joorjens.joorapp.fragments.CommonRegistrationP2Fragment">
+
+
+   <RadioGroup
+       android:layout_alignParentRight="true"
+       android:gravity="right"
+       android:id="@+id/rg_pdr_filter"
+       android:layout_marginTop="0dp"
+       android:layout_marginBottom="40dp"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+
+      <ir.joorjens.joorapp.customViews.RadioButtonPlus
+          android:id="@+id/rd_crp2_role_store"
+          style="@style/RadioButtonStyle"
+          android:text="@string/role_store"/>
+
+      <ir.joorjens.joorapp.customViews.RadioButtonPlus
+          android:enabled="false"
+          android:id="@+id/rd_crp2_role_delivery"
+          style="@style/RadioButtonStyle"
+          android:text="@string/role_delivery"/>
+
+
+   </RadioGroup>
+
+   <ir.joorjens.joorapp.customViews.ButtonPlus
+       android:layout_marginBottom="10dp"
+       android:id="@+id/btn_crp2_continue"
+       android:layout_below="@+id/rg_pdr_filter"
+       android:layout_width="200dp"
+       android:layout_height="wrap_content"
+       style="@style/ButtonFirstStyle"
+       android:text="تایید"/>
+
+</RelativeLayout>

@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_marginBottom="10dp"
+        android:padding="5dp"
+        android:id="@+id/vp_filters_container_fake"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/gray_bg_with_shadow">
+        <LinearLayout
+            android:id="@+id/pay_priority_container_fake"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="5">
+            <RadioGroup
+                android:layout_marginRight="10dp"
+                android:id="@+id/rg_pdr_filter_fake"
+                android:layout_width="0px"
+                android:layout_weight="2.5"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ir.joorjens.joorapp.customViews.RadioButtonPlus
+                    android:id="@+id/vp_check_radio_fake"
+                    style="@style/RadioButtonStyle"
+                    android:text="@string/label_check"
+                    android:layout_width="0px"
+                    android:layout_weight="1"/>
+
+                <ir.joorjens.joorapp.customViews.RadioButtonPlus
+                    android:id="@+id/vp_cash_radio_fake"
+                    style="@style/RadioButtonStyle"
+                    android:checked="true"
+                    android:text="@string/label_chash"
+                    android:layout_width="0px"
+                    android:layout_weight="1"/>
+            </RadioGroup>
+
+            <ir.joorjens.joorapp.customViews.TextViewPlus
+                android:layout_width="0px"
+                android:layout_weight="2.5"
+                android:layout_height="wrap_content"
+                android:text="اولویت پرداخت:"
+                style="@style/TextStyleRegular"
+                android:textColor="@color/color_first"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <ir.joorjens.joorapp.customViews.CheckBoxPlus
+                android:layout_marginRight="10dp"
+                android:id="@+id/vp_cheap_checkbox_fake"
+                style="@style/CheckBoxStyle"
+                android:layout_marginBottom="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:checked="false"
+                android:gravity="center_vertical"
+                android:text="با اولویت ارزانترین" />
+
+            <RelativeLayout
+                android:id="@+id/count_container_fake"
+                android:layout_width="0dp"
+                android:layout_weight="2.5"
+                android:layout_height="wrap_content">
+                <ir.joorjens.joorapp.customViews.EditTextPlus
+                    android:imeOptions="actionDone"
+                    android:id="@+id/vp_order_number_fake"
+                    style="@style/EditTextStyle"
+                    android:layout_width="90dp"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    android:hint="وارد کنید"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/lbl_count_fake"
+                    android:inputType="number"
+                    android:minHeight="10dp" />
+                <ir.joorjens.joorapp.customViews.TextViewPlus
+                    android:id="@+id/lbl_count_fake"
+                    style="@style/TextStyleRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="تعداد:"
+                    android:textColor="#F00" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pv_refresh">
+
+        <android.support.v4.widget.NestedScrollView
+        android:layout_height="wrap_content"
+        android:id="@+id/pv_main_scroll"
+        android:layout_width="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:scrollbars="none">
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/title_bar2_boarder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/pv_top_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ir.joorjens.joorapp.customViews.TitleBar2
+                    android:id="@+id/pv_title_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/cheap_color"
+                    app:title2_text="ارزانترین ها"
+                    app:tile2_image="@drawable/all_cheap_logo">
+
+                </ir.joorjens.joorapp.customViews.TitleBar2>
+                <LinearLayout
+                    android:id="@+id/vpr_product_all_properties_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:layout_marginTop="5dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical|right"
+                        android:orientation="vertical">
+
+                        <ir.joorjens.joorapp.customViews.TextViewPlus
+                            android:layout_marginRight="15dp"
+                            android:layout_marginBottom="5dp"
+                            android:id="@+id/vp_product_title"
+                            android:text="نام محصول"
+                            style="@style/TextStyleRegular"
+                            android:textSize="20sp"
+                            android:textColor="@color/cheap_color"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <LinearLayout
+                            android:paddingLeft="5dp"
+                            android:paddingRight="15dp"
+                            android:paddingBottom="5dp"
+                            android:gravity="center_vertical|right"
+                            android:id="@+id/vp_product_properties_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/vp_product_title"
+                            android:orientation="vertical"
+                            android:showDividers="middle"
+                            android:divider="@drawable/empty_tall_divider">
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_weight="1">
+
+                        <ir.joorjens.joorapp.customViews.ImageViewPlus
+                            app:iv_square="true"
+                            app:iv_text_size="30"
+                            android:id="@+id/vp_product_img"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:scaleType="fitCenter" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_marginBottom="10dp"
+                    android:padding="5dp"
+                    android:id="@+id/vp_filters_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/gray_bg_with_shadow">
+                    <LinearLayout
+                        android:id="@+id/pay_priority_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+                        <RadioGroup
+                            android:layout_marginRight="10dp"
+                            android:id="@+id/rg_pdr_filter"
+                            android:layout_width="0px"
+                            android:layout_weight="2.5"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ir.joorjens.joorapp.customViews.RadioButtonPlus
+                                android:id="@+id/vp_check_radio"
+                                style="@style/RadioButtonStyle"
+                                android:text="@string/label_check"
+                                android:layout_width="0px"
+                                android:layout_weight="1"/>
+
+                            <ir.joorjens.joorapp.customViews.RadioButtonPlus
+                                android:id="@+id/vp_cash_radio"
+                                style="@style/RadioButtonStyle"
+                                android:checked="true"
+                                android:text="@string/label_chash"
+                                android:layout_width="0px"
+                                android:layout_weight="1"/>
+                        </RadioGroup>
+
+                        <ir.joorjens.joorapp.customViews.TextViewPlus
+                            android:layout_width="0px"
+                            android:layout_weight="2.5"
+                            android:layout_height="wrap_content"
+                            android:text="اولویت پرداخت:"
+                            style="@style/TextStyleRegular"
+                            android:textColor="@color/color_first"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <ir.joorjens.joorapp.customViews.CheckBoxPlus
+                            android:layout_marginRight="10dp"
+                            android:id="@+id/vp_cheap_checkbox"
+                            style="@style/CheckBoxStyle"
+                            android:layout_marginBottom="0dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_width="0px"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:checked="false"
+                            android:gravity="center_vertical"
+                            android:text="با اولویت ارزانترین" />
+
+                        <RelativeLayout
+                            android:id="@+id/count_container"
+                            android:layout_width="0dp"
+                            android:layout_weight="2.5"
+                            android:layout_height="wrap_content">
+                            <ir.joorjens.joorapp.customViews.EditTextPlus
+                                android:imeOptions="actionDone"
+                                android:id="@+id/vp_order_number"
+                                style="@style/EditTextStyle"
+                                android:layout_width="90dp"
+                                android:layout_height="35dp"
+                                android:layout_marginBottom="0dp"
+                                android:layout_marginLeft="20dp"
+                                android:gravity="center"
+                                android:hint="وارد کنید"
+                                android:layout_marginRight="10dp"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/lbl_count"
+                                android:inputType="number"
+                                android:minHeight="10dp" />
+                            <ir.joorjens.joorapp.customViews.TextViewPlus
+                                android:id="@+id/lbl_count"
+                                style="@style/TextStyleRegular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:text="تعداد:"
+                                android:textColor="#F00" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/vp_product_distributors_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vp_filters_container"
+                android:orientation="vertical">
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_below="@id/vp_product_properties_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <ir.joorjens.joorapp.customViews.ButtonPlus
+                android:id="@+id/pv_btn_show_dProduct_in_discount_packs"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/ButtonFirstStyle"
+                android:text="@string/show_dProduct_in_discount_packs"/>
+
+            <ir.joorjens.joorapp.customViews.ButtonPlus
+                android:id="@+id/pv_btn_show_dProduct_in_bundling_packs"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/ButtonPinkBGWhiteTextStyle"
+                android:text="@string/show_dProduct_in_bundling_packs"/>
+
+
+            <ir.joorjens.joorapp.customViews.ASLinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/spinner_item_back_color"
+                app:ll_h_percent=".03"/>
+
+            <ir.joorjens.joorapp.customViews.TextViewPlus
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                style="@style/TextStyleBold"
+                android:textColor="@color/discount_color"
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/similar_product"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/pv_rcv_similar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:scrollbars="none">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>
+

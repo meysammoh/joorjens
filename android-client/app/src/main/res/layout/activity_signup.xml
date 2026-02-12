@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:id="@+id/signup_a_main"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="56dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp">
+
+        <ImageView android:src="@drawable/app_logo_with_text_fa"
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:layout_marginBottom="24dp"
+            android:layout_gravity="center_horizontal" />
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_registration"
+            android:layout_gravity="right"
+            style="@style/TextStyle"
+            android:textSize="22sp"/>
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_first_name"
+            android:layout_gravity="right"
+            style="@style/TextStyle"
+            android:layout_marginTop="18dp"
+            />
+        <ir.joorjens.joorapp.customViews.EditTextPlus
+            android:id="@+id/input_signup_first_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:background="@drawable/edit_text_background"
+            android:minHeight="@dimen/edit_text_min_height"
+            android:textAlignment="center"
+            style="@style/TextStyle"
+            />
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_last_name"
+            android:layout_gravity="right"
+            style="@style/TextStyle"
+            android:layout_marginTop="18dp"
+            />
+        <ir.joorjens.joorapp.customViews.EditTextPlus
+            android:id="@+id/input_signup_last_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:background="@drawable/edit_text_background"
+            android:minHeight="@dimen/edit_text_min_height"
+            android:textAlignment="center"
+            style="@style/TextStyle"
+            />
+
+        <!-- Mobile Label -->
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_mobile_number"
+            android:layout_gravity="right"
+            style="@style/TextStyle"
+            android:layout_marginTop="18dp" />
+        <ir.joorjens.joorapp.customViews.EditTextPlus
+            android:id="@+id/input_signup_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:background="@drawable/edit_text_background"
+            android:minHeight="@dimen/edit_text_min_height"
+            style="@style/TextStyle"
+            android:textAlignment="center"/>
+        <!-- Email Label -->
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_email_arbitrary"
+            android:layout_gravity="right"
+            style="@style/TextStyle"
+            android:layout_marginTop="18dp"/>
+        <ir.joorjens.joorapp.customViews.EditTextPlus
+            android:id="@+id/input_signup_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/edit_text_background"
+            android:minHeight="@dimen/edit_text_min_height"
+            style="@style/TextStyle"
+            android:textAlignment="center"/>
+        <!-- Password Label -->
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_password"
+            android:layout_gravity="right"
+            style="@style/TextStyle"
+            android:layout_marginTop="18dp" />
+        <ir.joorjens.joorapp.customViews.EditTextPlus
+            android:id="@+id/input_signup_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint=""
+            android:background="@drawable/edit_text_background"
+            android:minHeight="@dimen/edit_text_min_height"
+            style="@style/TextStyle"
+            android:textAlignment="center"/>
+        <!-- Repeat Password Label -->
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_password_repeat"
+            android:layout_gravity="right"
+            style="@style/TextStyle"
+            android:layout_marginTop="18dp" />
+        <EditText android:id="@+id/input_signup_password_repeat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint=""
+            android:background="@drawable/edit_text_background"
+            android:minHeight="@dimen/edit_text_min_height"
+            android:textAlignment="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <ir.joorjens.joorapp.customViews.ButtonPlus
+                android:id="@+id/btn_signup_create"
+                style="@style/ButtonFirstStyle"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/button_approve"
+                android:textSize="18sp"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

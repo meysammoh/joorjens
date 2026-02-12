@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:id="@+id/hba_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/hba_top_border"
+        android:background="@color/background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="top">
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            style="@style/TextStyle"
+            android:textColor="@color/color_first"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:text="پنل کاربری"
+            android:id="@+id/hba_activity_title"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#000">
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_above="@+id/main_bottomNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            android:id="@+id/hba_content_frame">
+
+        </FrameLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:background="@color/fab_bg"
+            app:backgroundTint= "@color/fab_bg"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start"
+            android:elevation="0dp"
+            app:elevation="0dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="50dp"
+            android:src="@drawable/jj_arrow_up"/>
+
+        <android.support.design.widget.BottomNavigationView
+            android:layout_gravity="bottom"
+            android:background="@color/background"
+            android:layout_margin="0dp"
+            android:padding="0dp"
+            android:id="@+id/main_bottomNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <LinearLayout
+                android:background="@color/background"
+                android:layout_marginTop="3dp"
+                android:id="@+id/hp_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:weightSum="4">
+
+                <LinearLayout
+                    android:id="@+id/hp_ll_search"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
+                    <ir.joorjens.joorapp.customViews.ImageViewPlus
+                        app:iv_square="true"
+                        app:iv_percent=".07"
+                        android:id="@+id/hp_search"
+                        android:layout_width="@dimen/hp_button_logo_size"
+                        android:layout_height="@dimen/hp_button_logo_size"
+                        android:layout_gravity="center_horizontal"
+                        app:iv_image_source ="@drawable/hp_search_logo_unsel"/>
+                    <ir.joorjens.joorapp.customViews.TextViewPlus
+                        style="@style/TextStyleRegular"
+                        android:layout_marginTop="1dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/hp_bnv_font_size"
+                        android:text="جستجوی کالا"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/hp_ll_category"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
+                    <ir.joorjens.joorapp.customViews.ImageViewPlus
+                        app:iv_square="true"
+                        app:iv_percent=".07"
+                        android:id="@+id/hp_category"
+                        android:layout_width="@dimen/hp_button_logo_size"
+                        android:layout_height="@dimen/hp_button_logo_size"
+                        android:layout_gravity="center_horizontal"
+                        app:iv_image_source ="@drawable/hp_category_logo_unsel"/>
+                    <ir.joorjens.joorapp.customViews.TextViewPlus
+                        style="@style/TextStyleRegular"
+                        android:layout_marginTop="1dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/hp_bnv_font_size"
+                        android:text="دسته بندی کالا"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/hp_ll_company"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
+                    <ir.joorjens.joorapp.customViews.ImageViewPlus
+                        app:iv_square="true"
+                        app:iv_percent=".07"
+                        android:id="@+id/hp_company"
+                        android:layout_width="@dimen/hp_button_logo_size"
+                        android:layout_height="@dimen/hp_button_logo_size"
+                        android:layout_gravity="center_horizontal"
+                        app:iv_image_source ="@drawable/hp_company_logo_unsel"/>
+                    <ir.joorjens.joorapp.customViews.TextViewPlus
+                        style="@style/TextStyleRegular"
+                        android:layout_marginTop="1dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/hp_bnv_font_size"
+                        android:text="تأمین کنندگان"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/hp_ll_home"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
+                    <ir.joorjens.joorapp.customViews.ImageViewPlus
+                        app:iv_square="true"
+                        app:iv_percent=".07"
+                        android:id="@+id/hp_home"
+                        android:layout_width="@dimen/hp_button_logo_size"
+                        android:layout_height="@dimen/hp_button_logo_size"
+                        android:layout_gravity="center_horizontal"
+                        app:iv_image_source ="@drawable/hp_home_logo_unsel"/>
+                    <ir.joorjens.joorapp.customViews.TextViewPlus
+                        style="@style/TextStyleRegular"
+                        android:layout_marginTop="1dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/hp_bnv_font_size"
+                        android:text="خانه"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.design.widget.BottomNavigationView>
+
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</LinearLayout>
+
+

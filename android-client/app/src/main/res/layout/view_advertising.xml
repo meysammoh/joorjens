@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ir.joorjens.joorapp.customViews.ASLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="3dp"
+    android:layout_marginRight="3dp"
+    android:background="@drawable/black20_border"
+    app:ll_h_percent=".186"
+    app:ll_w_percent=".30">
+
+    <ImageView
+        android:layout_margin="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/adv_img"/>
+
+</ir.joorjens.joorapp.customViews.ASLinearLayout>

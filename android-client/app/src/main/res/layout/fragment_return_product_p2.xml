@@ -1,0 +1,163 @@
+<FrameLayout
+    android:layout_marginTop="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="ir.joorjens.joorapp.fragments.ReturnProductP2Fragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="vertical">
+
+        <ir.joorjens.joorapp.customViews.ASRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:rl_percent=".3"
+            android:layout_marginBottom="10dp">
+
+            <ir.joorjens.joorapp.customViews.ImageViewPlus
+                android:layout_marginLeft="10dp"
+                android:id="@+id/frpp2_img_product"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:iv_square="true"
+                app:iv_percent=".3"
+                android:layout_alignParentRight="true"/>
+
+            <LinearLayout
+                android:gravity="right"
+                android:layout_toLeftOf="@+id/frpp2_img_product"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="4">
+
+                <ir.joorjens.joorapp.customViews.TextViewPlus
+                    android:id="@+id/frpp2_product_name"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    style="@style/TextStyle"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_first"
+                    android:text="نام محصول"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:weightSum="2">
+
+                    <ir.joorjens.joorapp.customViews.TextViewPlus
+                        android:id="@+id/frpp2_product_category"
+                        android:layout_width="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textSize="18dp"
+                        style="@style/TextStyle"
+                        android:textColor="@color/color_black50"
+                        android:text="مقدار دسته"/>
+
+                    <ir.joorjens.joorapp.customViews.TextViewPlus
+                        android:textSize="18dp"
+                        android:layout_width="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        style="@style/TextStyle"
+                        android:textColor="@color/color_first"
+                        android:text="@string/lbl_product_category"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:weightSum="2">
+
+                    <ir.joorjens.joorapp.customViews.TextViewPlus
+                        android:textSize="18dp"
+                        android:id="@+id/frpp2_product_packing_type"
+                        android:layout_width="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        style="@style/TextStyle"
+                        android:textColor="@color/color_black50"
+                        android:text="مقدار نوع ظرف"/>
+
+                    <ir.joorjens.joorapp.customViews.TextViewPlus
+                        android:textSize="18dp"
+                        android:layout_width="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        style="@style/TextStyle"
+                        android:textColor="@color/color_first"
+                        android:text="@string/lbl_product_packing_type"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:weightSum="2">
+
+                    <ir.joorjens.joorapp.customViews.TextViewPlus
+                        android:textSize="18dp"
+                        android:id="@+id/frpp2_product_price"
+                        android:layout_width="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        style="@style/TextStyle"
+                        android:textColor="@color/color_black50"
+                        android:text="مقدار قیمت"/>
+
+                    <ir.joorjens.joorapp.customViews.TextViewPlus
+                        android:textSize="18dp"
+                        android:layout_width="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        style="@style/TextStyle"
+                        android:textColor="@color/color_first"
+                        android:text="@string/lbl_product_price"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ir.joorjens.joorapp.customViews.ASRelativeLayout>
+
+        <include layout="@layout/gray_horizontal_divider"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="right">
+            <ir.joorjens.joorapp.customViews.TextViewPlus
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextStyle"
+                android:textColor="@color/color_first"
+                android:text="@string/lbl_product_return_result"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

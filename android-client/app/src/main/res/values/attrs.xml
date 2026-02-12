@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ProgressWheel">
+        <attr name="pwText" format="string" />
+        <attr name="pwTextColor" format="color" />
+        <attr name="pwTextSize" format="dimension" />
+        <attr name="pwBarColor" format="color" />
+        <attr name="pwRimColor" format="color" />
+        <attr name="pwRimWidth" format="dimension" />
+        <attr name="pwSpinSpeed" format="dimension" />
+        <attr name="pwDelayMillis" format="integer" />
+        <attr name="pwCircleColor" format="color" />
+        <attr name="pwRadius" format="dimension" />
+        <attr name="pwBarWidth" format="dimension" />
+        <attr name="pwBarLength" format="dimension" />
+        <attr name="pwContourColor" format="color"/>
+        <attr name="pwContourSize" format="dimension"/>
+    </declare-styleable>
+    <declare-styleable name="CustomFont">
+        <attr name="ffont" format="string"/>
+    </declare-styleable>
+    <declare-styleable name="ToggleButtonPlus">
+        <attr name="selected" format="boolean"/>
+        <attr name="selected_bg_drawable" format="integer"/>
+        <attr name="selected_text_color" format="color"/>
+        <attr name="normal_bg_drawable" format="integer"/>
+        <attr name="normal_text_color" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="BrowseButton">
+        <attr name="text_view_text" format="string"/>
+        <attr name="button_text" format="string"/>
+        <attr name="android:textColor"/>
+        <attr name="android:textSize"/>
+    </declare-styleable>
+
+    <declare-styleable name="TitleBar">
+        <attr name="title_text_color" format="color"/>
+        <attr name="title_text" format="string"/>
+        <attr name="view_all_text" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="TitleBar2">
+        <attr name="android:background"/>
+        <attr name="title2_text" format="string"/>
+        <attr name="tile2_image" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="ASLinearLayout">
+        <attr name="ll_h_percent" format="float"/>
+        <attr name="ll_w_percent" format="float"/>
+        <attr name="ll_left_margin" format="float"/>
+        <attr name="ll_tight_margin" format="float"/>
+        <attr name="ll_top_margin" format="float"/>
+        <attr name="ll_bottom_margin" format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="ASRelativeLayout">
+        <attr name="rl_percent" format="float"/>
+        <attr name="rl_left_margin" format="float"/>
+        <attr name="rl_right_margin" format="float"/>
+        <attr name="rl_top_margin" format="float"/>
+        <attr name="rl_bottom_margin" format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="ImageViewPlus">
+        <attr name="iv_stretch" format="boolean"/>
+        <attr name="iv_image_source" format="integer"/>
+        <attr name="iv_discount_value" format="string"/>
+        <attr name="iv_text_size" format="float"/>
+        <attr name="iv_show_discount_value" format="boolean"/>
+        <attr name="iv_percent" format="float"/>
+        <attr name="iv_square" format="boolean"/>
+        <attr name="iv_left_margin" format="float"/>
+        <attr name="iv_right_margin" format="float"/>
+        <attr name="iv_top_margin" format="float"/>
+        <attr name="iv_bottom_margin" format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="SpinnerPlus">
+        <attr name="sp_layout" format="reference"/>
+    </declare-styleable>
+    
+    <declare-styleable name="FreakyInputBox">
+        <attr name="fib_name" format="string"/>
+        <attr name="fib_action_name" format="string"/>
+        <attr name="fib_value" format="string"/>
+        <attr name="fib_show_action" format="boolean"/>
+        <attr name="fib_read_only" format="boolean"/>
+        <attr name="android:inputType"/>
+    </declare-styleable>
+
+    <declare-styleable name="PersianDatePicker">
+        <attr name="minYear" format="integer" />
+        <attr name="maxYear" format="integer" />
+        <attr name="selectedYear" format="integer" />
+        <attr name="selectedMonth" format="integer" />
+        <attr name="selectedDay" format="integer" />
+        <attr name="displayMonthNames" format="boolean" />
+        <attr name="yearRange" format="integer"/>
+        <attr name="displayDescription" format="boolean" />
+        <attr name="timezone" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="CircularProgress">
+        <attr name="cp_color" format="color"/>
+        <attr name="cp_thickness" format="float"/>
+        <attr name="cp_start_value" format="float"/>
+        <attr name="cp_started" format="boolean"/>
+    </declare-styleable>
+
+
+</resources>

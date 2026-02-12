@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context="ir.joorjens.joorapp.fragments.StoreRegistrationP3Fragment">
+
+    <ir.joorjens.joorapp.customViews.TextViewPlus
+        android:text="@string/srp3_imageBusinessLicense"
+        style="@style/TextStyle"/>
+    <ir.joorjens.joorapp.customViews.BrowseButton
+        android:id="@+id/btn_srp3_imageBusinessLicense"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="30dp"
+        app:button_text="آپلود"
+        android:layout_height="wrap_content"/>
+
+    <ir.joorjens.joorapp.customViews.TextViewPlus
+        android:text="@string/srp3_managerImageNI"
+        style="@style/TextStyle"/>
+    <ir.joorjens.joorapp.customViews.BrowseButton
+        android:id="@+id/btn_srp3_managerImageNI"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="30dp"
+        app:button_text="آپلود"
+        android:layout_height="wrap_content"/>
+
+    <ir.joorjens.joorapp.customViews.TextViewPlus
+        android:text="@string/srp3_managerImageBC"
+        style="@style/TextStyle"/>
+    <ir.joorjens.joorapp.customViews.BrowseButton
+        android:id="@+id/btn_srp3_managerImageBC"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="40dp"
+        app:button_text="آپلود"
+        android:layout_height="wrap_content"/>
+
+    <ir.joorjens.joorapp.customViews.ButtonPlus
+        android:layout_marginBottom="10dp"
+        android:id="@+id/btn_srp3_continue"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        style="@style/ButtonFirstStyle"
+        android:text="تایید"/>
+
+</LinearLayout>

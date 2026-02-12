@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/edit_text_background">
+
+        <ir.joorjens.joorapp.customViews.ButtonPlus
+            android:id="@+id/browse_button_button"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/color_first_border"
+            style="@style/TextStyleRegular"
+            android:textSize="15sp"
+            android:textColor="@color/color_first"
+            android:layout_margin="8dp"/>
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:id="@+id/browse_button_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            style="@style/TextStyle"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

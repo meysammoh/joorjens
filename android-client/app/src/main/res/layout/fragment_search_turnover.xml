@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:id="@+id/fsto_ll_body"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:gravity="right"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <ir.joorjens.joorapp.customViews.ImageViewPlus
+        android:id="@+id/fsto_img_close"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="40dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:iv_square="true"
+        app:iv_image_source="@drawable/v_delete_order"/>
+
+
+    <ir.joorjens.joorapp.customViews.TextViewPlus
+        style="@style/TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_transaction_type"
+        android:layout_marginRight="5dp"/>
+    <ir.joorjens.joorapp.customViews.SpinnerPlus
+        android:id="@+id/fsto_sp_transaction_type"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_height"
+        style="@style/SpinnerGreenStyle"/>
+
+    <ir.joorjens.joorapp.customViews.TextViewPlus
+        style="@style/TextStyle"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_date_from"
+        android:layout_marginRight="5dp"/>
+    <ir.joorjens.joorapp.customViews.PersianDatePicker
+        android:id="@+id/pdp_from"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ir.joorjens.joorapp.customViews.TextViewPlus
+        style="@style/TextStyle"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_date_to"
+        android:layout_marginRight="5dp"/>
+    <ir.joorjens.joorapp.customViews.PersianDatePicker
+        android:id="@+id/pdp_to"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ir.joorjens.joorapp.customViews.ButtonPlus
+        android:id="@+id/fsto_btn_search"
+        style="@style/ButtonGreenBGWhiteTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/lbl_action_perform_search"
+        android:layout_marginBottom="20dp"/>
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="false"
+    tools:context="ir.joorjens.joorapp.activities.ControlPanelActivity">
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:id="@+id/cpa_ll_change_pass"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <ir.joorjens.joorapp.customViews.TextViewPlus
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_first"
+                style="@style/TextStyle"
+                android:text="تغییر رمز عبور"/>
+            <android.support.v7.widget.AppCompatImageView
+                android:scaleType="centerInside"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="15dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/v_bullet"/>
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+</ScrollView>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/container_past_carts_summary_header">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ir.joorjens.joorapp.customViews.TextViewPlus
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="orders count"
+                android:id="@+id/tv_past_carts_orders_count"
+                />
+            <ir.joorjens.joorapp.customViews.TextViewPlus
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/label_count_of_orders"
+                android:id="@+id/tv_past_carts_orders_count_label"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ir.joorjens.joorapp.customViews.TextViewPlus
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="orders cost"
+                android:id="@+id/tv_past_carts_orders_cost"
+                />
+            <ir.joorjens.joorapp.customViews.TextViewPlus
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/label_cost_of_orders"
+                android:id="@+id/tv_past_carts_orders_cost_label"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ir.joorjens.joorapp.customViews.TextViewPlus
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="orders profit"
+                android:id="@+id/tv_past_carts_orders_profit"
+                />
+            <ir.joorjens.joorapp.customViews.TextViewPlus
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/label_profit_of_orders"
+                android:id="@+id/tv_past_carts_orders_profit_label"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/fragment_past_carts_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+</LinearLayout>

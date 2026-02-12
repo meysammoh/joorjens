@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.SwipeRefreshLayout
+    android:id="@+id/satm_refresh"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--<android.support.v4.widget.NestedScrollView-->
+        <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+    <!--android:id="@+id/satm_main_scroll"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+    <LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ir.joorjens.joorapp.customViews.TitleBar2
+        android:id="@+id/tb2_satm"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/cheap_color"
+        app:title2_text="ارزانترین ها"
+        app:tile2_image="@drawable/all_cheap_logo">
+
+    </ir.joorjens.joorapp.customViews.TitleBar2>
+
+<ir.joorjens.joorapp.customViews.TextViewPlus
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="محصولی یافت نشد."
+    android:visibility="gone"
+    android:id="@+id/tv_shown_all_most_result_message"
+    style="@style/TextStyle"/>
+    <android.support.v7.widget.RecyclerView
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:id="@+id/satm_rcv_products"
+        android:nestedScrollingEnabled="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="true"
+        android:scrollbars="none">
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>
+
+<!--</android.support.v4.widget.NestedScrollView>-->
+
+</android.support.v4.widget.SwipeRefreshLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="right">
+
+    <RelativeLayout
+        android:id="@+id/rl_title_container"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/color_first">
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:layout_marginRight="10dp"
+            android:id="@+id/tv_date"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextStyle"
+            android:textColor="#FFFFFF"
+            android:layout_marginLeft="45dp"
+            android:text="date"/>
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:id="@+id/tv_time"
+            android:layout_toLeftOf="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextStyle"
+            android:textColor="#FFFFFF"
+            android:text="time"/>
+    </RelativeLayout>
+
+    <ir.joorjens.joorapp.customViews.TextViewPlus
+        android:text="10 تومان"
+        style="@style/TextStyle"
+        android:id="@+id/tv_amount"
+        android:layout_marginRight="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ir.joorjens.joorapp.customViews.TextViewPlus
+        style="@style/TextStyle"
+        android:text="@string/lbl_turnover_money_comment"
+        android:id="@+id/tv_note"
+        android:layout_marginRight="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

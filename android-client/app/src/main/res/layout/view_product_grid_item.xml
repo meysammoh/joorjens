@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/the_most_items_body"
+    android:layout_width="wrap_content"
+    android:background="@color/background"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp">
+
+    <ir.joorjens.joorapp.customViews.ImageViewPlus
+        app:iv_text_size="17"
+        app:iv_show_discount_value="false"
+        android:id="@+id/the_most_items_image"
+        android:scaleType="centerInside"
+        app:iv_square="true"
+        app:iv_percent=".28"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/radio_plus" />
+
+        <ir.joorjens.joorapp.customViews.TextViewPlus
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:id="@+id/the_most_items_brand_name"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            app:ll_top_margin=".005"
+            app:ll_bottom_margin="0"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            style="@style/TextStyleRegular"
+            android:text="رب گوجه مجید"/>
+
+
+    <ir.joorjens.joorapp.customViews.TextViewPlus
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:id="@+id/the_most_items_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        style="@style/TextStyleRegular"
+        android:gravity="center"
+        android:text="250000 ریال"/>
+
+</LinearLayout>
