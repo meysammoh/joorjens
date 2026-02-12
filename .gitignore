@@ -19,6 +19,7 @@ local.properties
 *.aab
 *.dex
 *.ap_
+google-services.json
 
 # Keys (never commit)
 *.jks
